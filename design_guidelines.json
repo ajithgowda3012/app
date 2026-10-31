@@ -1,0 +1,204 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings_font": "Cormorant Garamond",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] font-medium",
+      "h2": "text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight font-medium",
+      "h3": "text-2xl md:text-3xl tracking-tight font-medium",
+      "h4": "text-sm md:text-base uppercase tracking-[0.2em] font-semibold text-gray-500",
+      "body": "text-base md:text-lg leading-relaxed text-[#1A1A1A]/80"
+    }
+  },
+  "colors": {
+    "primary": "#042F4B",
+    "secondary": "#4CA1A3",
+    "accent": "#D5C8B7",
+    "background": "#F7F5F0",
+    "text_primary": "#1A1A1A",
+    "text_secondary": "#4A4A4A"
+  },
+  "visual_enhancers": {
+    "texture": "Subtle noise overlay on backgrounds to remove digital flatness. Keeps it organic and natural.",
+    "border": "Use 1px borders using border-[#D5C8B7] to create elegant architectural lines. Avoid heavy drop shadows.",
+    "hover_effects": "Image zoom on hover (`scale-105` with `duration-700 ease-out`). Text color shifts subtly.",
+    "overlays": "Hero image max overlay opacity: `bg-black/30`. Keep it light, preserve the photography."
+  },
+  "layouts": {
+    "general": "Editorial style, left-aligned, asymmetrical, heavy negative space (`py-24`, `gap-16`). Never center-everything.",
+    "hero": "Cinematic full height (100vh). Left-aligned huge typography with line-by-line mask reveal animation. Content anchored to bottom.",
+    "experiences": "Bento Grid Mode A: Asymmetrical layout mixing square, tall, and wide photographic cards with deep negative space.",
+    "gallery": "Masonry or irregular grid, mixing 3:4 and 16:9 aspect ratios. Implement filterable buttons and a lightbox.",
+    "about": "Magazine style, two-column layouts where text and imagery overlap slightly to create depth."
+  },
+  "motion": {
+    "scroll": "Use Lenis for premium momentum scroll.",
+    "hero_reveal": "Framer Motion line-by-line staggered text reveal (opacity and y-axis translation).",
+    "parallax": "Subtle y-axis parallax on large images during scroll using framer-motion useScroll.",
+    "marquee": "Slow-moving editorial ribbon. Pale background (`#D5C8B7`), dark serif text. `gap-24`."
+  },
+  "components_to_use": [
+    {
+      "name": "Header",
+      "description": "Sticky top, crystal glassmorphism `backdrop-blur-xl bg-[#F7F5F0]/70`. Minimal links left, Book Now CTA right."
+    },
+    {
+      "name": "Floating WhatsApp",
+      "description": "Fixed bottom right circular button, #25D366 color, pulsing animation. Opens WhatsApp with prefilled message."
+    },
+    {
+      "name": "Marquee",
+      "description": "react-fast-marquee. Use warm sand background with charcoal serif text."
+    },
+    {
+      "name": "Filterable Gallery",
+      "description": "Custom grid component with state-based filtering (All, Action, Lessons, Lifestyle) and an image lightbox modal."
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure text over images has sufficient contrast or subtle text-shadow/gradient overlay.",
+    "data_testid": "Add data-testid to all interactive elements."
+  },
+  "media": {
+    "image_urls": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1532484468512-fd9df0aa70f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Cinematic surfer riding a wave at golden hour"
+      },
+      "experiences_beginner": {
+        "url": "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Beginner surf lesson"
+      },
+      "experiences_intermediate": {
+        "url": "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Intermediate surfing"
+      },
+      "experiences_private": {
+        "url": "https://images.unsplash.com/photo-1502933691298-84fc14542831?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Private surf coaching"
+      },
+      "experiences_group": {
+        "url": "https://images.unsplash.com/photo-1745594151310-d771b97211cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Group session headed to ocean"
+      },
+      "about_instructor": {
+        "url": "https://images.unsplash.com/photo-1489633908075-1c914e8ee5ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBwb3J0cmFpdCUyMGJlYWNofGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor portrait walking with yellow board"
+      },
+      "location_gokarna": {
+        "url": "https://images.unsplash.com/photo-1771945484043-3a17fbf57a4b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Tropical beach aerial, Gokarna coastal vibe"
+      },
+      "gallery_action": {
+        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Advanced surfing action focus"
+      },
+      "gallery_lifestyle_1": {
+        "url": "https://images.unsplash.com/photo-1551304885-7d8cc4ac849e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfboard on sand at sunset"
+      },
+      "gallery_lifestyle_2": {
+        "url": "https://images.unsplash.com/photo-1589819798346-1ab9a611a315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfer girl walking on beach"
+      },
+      "gallery_aerial": {
+        "url": "https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Beach bird's eye view"
+      },
+      "gallery_surfing_1": {
+        "url": "https://images.unsplash.com/photo-1527731149372-fae504a1185f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Surfers paddling out into deep green ocean waves"
+      },
+      "gallery_surfing_2": {
+        "url": "https://images.unsplash.com/photo-1498330177096-689e3fb901ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Large blue barrel wave crashing near the shore"
+      },
+      "gallery_surfing_3": {
+        "url": "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Surfer riding powerfully down the face of an ocean wave"
+      },
+      "gallery_lessons_1": {
+        "url": "https://images.unsplash.com/photo-1590767433546-94047b163cd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Female surf instructor giving a lesson on the beach"
+      },
+      "gallery_lessons_2": {
+        "url": "https://images.unsplash.com/photo-1730761970652-2e45c1ab3fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor helping a student balance on a surfboard in the water"
+      },
+      "gallery_lessons_3": {
+        "url": "https://images.unsplash.com/photo-1730799305374-03769d19590e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Two people reviewing surf technique on the shore"
+      },
+      "gallery_students_1": {
+        "url": "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Student successfully standing up on a red surfboard"
+      },
+      "gallery_students_2": {
+        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Student catching a wave in golden hour light"
+      },
+      "gallery_students_3": {
+        "url": "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Beginner student popping up on a soft-top board"
+      },
+      "gallery_instructors_1": {
+        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of a surf instructor holding a surfboard in tropical setting"
+      },
+      "gallery_instructors_2": {
+        "url": "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor walking confidently toward the ocean carrying a surfboard"
+      },
+      "gallery_instructors_3": {
+        "url": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Friendly portrait of a male surf coach smiling at the beach"
+      },
+      "gallery_beach_ocean_1": {
+        "url": "https://images.unsplash.com/photo-1468413253725-0d5181091126?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Lush tropical coastline meeting the blue ocean"
+      },
+      "gallery_beach_ocean_2": {
+        "url": "https://images.unsplash.com/photo-1509233725247-49e657c54213?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Coconut palm trees framing a pristine tropical beach"
+      },
+      "gallery_beach_ocean_3": {
+        "url": "https://images.unsplash.com/photo-1544945582-052b29cd29e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
+        "description": "Stunning white sand shoreline under clear sunny skies"
+      },
+      "gallery_lifestyle_3": {
+        "url": "https://images.unsplash.com/photo-1606816090771-b389a53fd4db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfer far in the distance with gentle waves crashing on the empty shore"
+      },
+      "gallery_lifestyle_4": {
+        "url": "https://images.unsplash.com/photo-1669574273770-4bf874c5896d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfer walking along the shoreline carrying a board at sunset"
+      },
+      "gallery_lifestyle_5": {
+        "url": "https://images.unsplash.com/photo-1551304885-277107370841?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "A classic white surfboard resting peacefully on the warm sand"
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install `lucide-react`, `framer-motion`, `react-fast-marquee`, and `lenis` (or `@studio-freight/lenis`) as they are required for premium web functionality.",
+    "Use react-router-dom to build the 5 specific pages (Home, Surf Lessons, About Us, Gallery, Contact) inside standard .js / .jsx files.",
+    "IMPORTANT: Write .js or .jsx files, DO NOT output .tsx files as this is a JavaScript project.",
+    "Use raw HTML/Tailwind for structural marketing layouts. Avoid wrapping entire marketing pages in Shadcn standard 'Card' components.",
+    "Implement scroll animations with framer-motion (e.g., `whileInView`, `viewport={{ once: true }}`).",
+    "Gallery page must have a filter system (All, Action, Lessons, Lifestyle) and an image lightbox (a full-screen fixed div modal overlay upon click).",
+    "Contact page form should utilize HTML/Shadcn inputs and a submit handler that opens the floating WhatsApp link with prefilled details."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Do not apply universal transition (`transition: all`). Add transitions for specific interactive elements only.",
+    "Do not center align the app container. No `.App { text-align: center; }`.",
+    "Use 2-3x more spacing (e.g. `py-24`, `p-12`) than feels comfortable.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use `lucide-react`.",
+    "NEVER use placeholder URLs. Use the exact image_urls provided in this JSON.",
+    "All interactive elements MUST include a `data-testid` attribute (e.g., `data-testid=\"book-now-btn\"`).",
+    "Header must not have a fully transparent background. Use glassmorphism (`backdrop-blur-xl bg-[#F7F5F0]/70`) so navigation links are readable over images.",
+    "Follow mobile-first responsive design strictly. Add responsive typography (`text-4xl md:text-6xl`).",
+    "Ensure `data-testid` is applied on all buttons, links, form inputs, and dynamic UI states."
+  ]
+}
