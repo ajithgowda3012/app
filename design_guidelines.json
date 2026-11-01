@@ -64,6 +64,14 @@
     "borders": "Delicate 1px borders using the --border variable. No heavy strokes.",
     "shadows": "Soft, diffuse ambient shadows for surfaces in light theme. In dark theme, use inner borders (border-white/10) instead of heavy shadows."
   },
+  "media": {
+    "image_urls": {
+      "hero_background_dark": {
+        "url": "https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBzdXJmaW5nJTIwc2lsaG91ZXR0ZXxlbnwwfHx8fDE3OTM1MjIwMzV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Dramatic evening sunset surf photograph with deep warm orange and red tones, surfer silhouette. Perfect for dark theme hero."
+      }
+    }
+  },
   "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
     "Always use the CSS variables defined in this document for colors to ensure the light/dark toggle works seamlessly.",
     "All files are .js (not .tsx) - ensure valid JSX without TypeScript type annotations.",

@@ -88,6 +88,15 @@ local surfer against a golden Gokarna headland.
 - Verified live via browser screenshots (testing_agent tool not available in this run —
   verified directly with the screenshot tool instead).
 
+## Refinements (2026-11-01)
+- Logo now circular everywhere (nav + footer) — no odd box in dark theme.
+- Theme-aware hero: morning surf in light theme, sunset surf in dark theme
+  (IMAGES.hero / IMAGES.heroDark, hero swaps via useTheme). Hero uses responsive srcSet.
+- Homepage tightened & reordered for the psychological action journey:
+  Hero → Intro → Experiences → Reviews (moved to 3rd) → Why Us → Final CTA.
+  Removed standalone Location block and gallery grid; photo strip folded into Final CTA.
+  Desktop scroll height reduced ~8000px → 6392px. Section padding tightened.
+
 ## Implemented (2026-11-01)
 - Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
   footer (on cream card), favicon.png, apple-touch-icon (assets in

@@ -5,12 +5,12 @@ import { BUSINESS, NAV_LINKS, waLink, GENERAL_MESSAGE } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
 const Footer = () => (
-  <footer data-testid="site-footer" className="bg-[var(--accent)] text-white">
+  <footer data-testid="site-footer" className="bg-[var(--accent-deep)] text-white">
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
       <div className="grid gap-12 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="inline-flex rounded-2xl bg-app px-4 py-2">
-            <Logo className="h-14 w-auto" />
+          <div className="inline-flex items-center justify-center rounded-full bg-white p-1 ring-1 ring-white/20">
+            <Logo className="h-14 w-14 rounded-full object-cover" />
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/75">
             {BUSINESS.description}

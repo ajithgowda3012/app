@@ -36,9 +36,9 @@ const Header = () => {
           to="/"
           data-testid="header-logo"
           aria-label="SurfKarnataka home"
-          className="flex shrink-0 items-center rounded-full bg-app px-3 py-1.5"
+          className="flex shrink-0 items-center rounded-full bg-white p-0.5 ring-1 ring-black/10"
         >
-          <Logo className="h-9 w-auto md:h-10" />
+          <Logo className="h-9 w-9 rounded-full object-cover md:h-10 md:w-10" />
         </Link>
 
         <nav

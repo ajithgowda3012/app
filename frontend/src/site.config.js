@@ -45,6 +45,7 @@ export const IMAGES = {
   aboutInstructor: "https://images.unsplash.com/photo-1746106075291-92d791c187e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
   locationGokarna: "https://images.unsplash.com/photo-1734120113639-0d034e85c377?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
   introSide: "https://images.unsplash.com/photo-1772791615983-c13f6e773082?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+  heroDark: "https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBzdXJmaW5nJTIwc2lsaG91ZXR0ZXxlbnwwfHx8fDE3OTM1MjIwMzV8MA&ixlib=rb-4.1.0&q=85",
 };
 
 // ── Surfing experiences (editable offerings) ─────────────────────────────────

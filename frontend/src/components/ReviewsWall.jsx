@@ -48,7 +48,7 @@ const ReviewCard = ({ review, index }) => (
 );
 
 const ReviewsWall = () => (
-  <section className="border-y border-appborder bg-app py-24 md:py-32" data-testid="reviews-section">
+  <section className="border-y border-appborder bg-app py-16 md:py-24" data-testid="reviews-section">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>

@@ -6,7 +6,6 @@ import {
   ArrowRight,
   ArrowUpRight,
   Waves,
-  MapPin,
   Instagram,
 } from "lucide-react";
 import Seo from "@/components/Seo";
@@ -14,6 +13,7 @@ import Reveal from "@/components/Reveal";
 import ExperienceCard from "@/components/ExperienceCard";
 import ReviewsWall from "@/components/ReviewsWall";
 import { WhatsAppButton } from "@/components/Buttons";
+import { useTheme } from "@/context/ThemeContext";
 import {
   BUSINESS,
   EXPERIENCES,
@@ -34,16 +34,22 @@ const lineReveal = {
 
 const Hero = () => {
   const ref = useRef(null);
+  const { theme } = useTheme();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "26%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1.08, 1.22]);
+  const dark = theme === "dark";
+  const heroSrc = dark ? IMAGES.heroDark : IMAGES.hero;
 
   return (
     <section ref={ref} className="noise relative flex min-h-[100svh] items-end overflow-hidden bg-[var(--accent)]">
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
-          src={img(IMAGES.hero, 2400)}
-          alt="Surfer riding a golden wave on the Gokarna coast at sunset"
+          key={heroSrc}
+          src={img(heroSrc, 2200)}
+          srcSet={`${img(heroSrc, 900)} 900w, ${img(heroSrc, 1600)} 1600w, ${img(heroSrc, 2200)} 2200w`}
+          sizes="100vw"
+          alt={dark ? "Surfer riding a wave at sunset on the Gokarna coast" : "Surfer riding a golden morning wave on the Gokarna coast"}
           className="h-full w-full object-cover"
           fetchpriority="high"
         />
@@ -139,7 +145,7 @@ const EditorialMarquee = () => (
 );
 
 const Intro = () => (
-  <section className="relative overflow-hidden py-24 md:py-36">
+  <section className="relative overflow-hidden py-16 md:py-24">
     <div className="mx-auto grid max-w-7xl gap-16 px-5 md:grid-cols-12 md:px-10">
       <div className="md:col-span-7">
         <Reveal><p className="eyebrow">Welcome to SurfKarnataka</p></Reveal>
@@ -193,7 +199,7 @@ const Intro = () => (
 );
 
 const Experiences = () => (
-  <section className="bg-surface py-24 md:py-36">
+  <section className="bg-surface py-16 md:py-24">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
@@ -215,7 +221,7 @@ const Experiences = () => (
           </Link>
         </Reveal>
       </div>
-      <div className="mt-16 grid gap-8 sm:grid-cols-2">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:gap-8">
         {EXPERIENCES.map((exp, i) => (
           <Reveal key={exp.id} delay={0.08 * i}>
             <ExperienceCard experience={exp} />
@@ -233,7 +239,7 @@ const Experiences = () => (
 );
 
 const WhyUs = () => (
-  <section className="bg-[var(--accent)] py-24 text-white md:py-36">
+  <section className="bg-[var(--accent)] py-16 text-white md:py-24">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
       <Reveal><p className="eyebrow text-[var(--secondary)]">Why SurfKarnataka</p></Reveal>
       <Reveal delay={0.1}>
@@ -241,7 +247,7 @@ const WhyUs = () => (
           The Ocean, the Town, the Way We Teach.
         </h2>
       </Reveal>
-      <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-app/15 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
         {HIGHLIGHTS.map((h, i) => (
           <Reveal key={h.title} delay={0.08 * i} className="h-full">
             <div
@@ -261,155 +267,68 @@ const WhyUs = () => (
   </section>
 );
 
-const GalleryPreview = () => {
-  const preview = [GALLERY[0], GALLERY[3], GALLERY[12], GALLERY[16], GALLERY[6]];
+const Reviews = () => <ReviewsWall />;
+
+const FinalCta = () => {
+  const strip = [GALLERY[0], GALLERY[3], GALLERY[12], GALLERY[16], GALLERY[6]];
   return (
-    <section className="py-24 md:py-36">
-      <div className="mx-auto max-w-7xl px-5 md:px-10">
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div>
-            <Reveal><p className="eyebrow">Moments from the Water</p></Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
-                Gokarna, Through Our Lens.
-              </h2>
-            </Reveal>
+    <section className="noise relative overflow-hidden py-20 md:py-28">
+      <img
+        src={img(IMAGES.locationGokarna, 2200)}
+        alt="Aerial view of the tropical coastline near Gokarna"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[var(--accent)]/75" aria-hidden="true" />
+      <div className="relative mx-auto max-w-7xl px-5 md:px-10">
+        <Reveal>
+          <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight text-white md:text-6xl">
+            Your Next Wave Is Waiting.
+          </h2>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
+            Ready to experience surfing in Gokarna? Get in touch and plan your session.
+          </p>
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="mt-8 grid grid-cols-3 gap-3 md:grid-cols-5 md:gap-4">
+            {strip.map((photo, i) => (
+              <div key={photo.alt} data-testid={`gallery-strip-img-${i}`} className="group overflow-hidden rounded-lg">
+                <img
+                  src={img(photo.src, 500)}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="aspect-square w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+              </div>
+            ))}
           </div>
-          <Reveal delay={0.2}>
+        </Reveal>
+        <Reveal delay={0.3}>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <WhatsAppButton
+              label="Start Your Surfing Journey"
+              source="final_cta"
+              tone="light"
+              testId="final-cta-whatsapp-btn"
+              className="px-8 py-4 text-base"
+            />
             <a
               href={BUSINESS.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              data-testid="gallery-instagram-link"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[var(--accent-deep)]"
+              data-testid="final-cta-instagram-btn"
+              className="inline-flex items-center gap-2 rounded-full border border-white/50 px-8 py-4 text-base font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-[var(--accent)]"
             >
               <Instagram className="h-4 w-4" /> {BUSINESS.instagramHandle}
             </a>
-          </Reveal>
-        </div>
-        <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-          {preview.map((photo, i) => (
-            <Reveal key={photo.alt} delay={0.07 * i} className={i === 0 ? "col-span-2 row-span-2" : ""}>
-              <div
-                data-testid={`gallery-preview-img-${i}`}
-                className="group h-full overflow-hidden rounded-xl"
-              >
-                <img
-                  src={img(photo.src, i === 0 ? 1400 : 800)}
-                  alt={photo.alt}
-                  loading="lazy"
-                  className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
-                    i === 0 ? "aspect-square h-full md:aspect-[4/4.2]" : "aspect-[4/3] md:aspect-[4/4.2]"
-                  }`}
-                />
-              </div>
-            </Reveal>
-          ))}
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
 };
-
-const Reviews = () => <ReviewsWall />;
-
-const Location = () => (
-  <section className="py-24 md:py-36">
-    <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:grid-cols-2 md:px-10">
-      <div>
-        <Reveal><p className="eyebrow">Location</p></Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
-            Find Us in Gokarna.
-          </h2>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <address className="mt-8 flex items-start gap-3 text-base not-italic leading-relaxed text-body">
-            <MapPin className="mt-1 h-5 w-5 shrink-0 text-brand" aria-hidden="true" />
-            <span>
-              <strong className="font-semibold text-strong">{BUSINESS.legalName}</strong>
-              <br />
-              {BUSINESS.addressLines.map((line) => (
-                <span key={line}>{line}<br /></span>
-              ))}
-            </span>
-          </address>
-        </Reveal>
-        <Reveal delay={0.3}>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={BUSINESS.mapsDirections}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="location-directions-btn"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[var(--accent-deep)]"
-            >
-              <MapPin className="h-4 w-4" /> Get Directions
-            </a>
-            <WhatsAppButton label="Chat on WhatsApp" source="location" tone="outline" testId="location-whatsapp-btn" />
-          </div>
-        </Reveal>
-      </div>
-      <Reveal delay={0.2}>
-        <div className="overflow-hidden rounded-2xl border border-appborder">
-          <iframe
-            title="Map showing SurfKarnataka in Gokarna, Karnataka"
-            src={BUSINESS.mapsEmbed}
-            loading="lazy"
-            data-testid="location-map"
-            className="aspect-[4/3] w-full border-0"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
-        </div>
-      </Reveal>
-    </div>
-  </section>
-);
-
-const FinalCta = () => (
-  <section className="noise relative overflow-hidden py-28 md:py-44">
-    <img
-      src={img(IMAGES.locationGokarna, 2200)}
-      alt="Aerial view of the tropical coastline near Gokarna"
-      loading="lazy"
-      className="absolute inset-0 h-full w-full object-cover"
-    />
-    <div className="absolute inset-0 bg-[var(--accent)]/70" aria-hidden="true" />
-    <div className="relative mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal>
-        <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-          Your Next Wave Is Waiting.
-        </h2>
-      </Reveal>
-      <Reveal delay={0.15}>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-          Ready to experience surfing in Gokarna? Get in touch with us and plan your session.
-        </p>
-      </Reveal>
-      <Reveal delay={0.3}>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <WhatsAppButton
-            label="Start Your Surfing Journey"
-            source="final_cta"
-            tone="light"
-            testId="final-cta-whatsapp-btn"
-            className="px-8 py-4 text-base"
-          />
-          <a
-            href={BUSINESS.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="final-cta-instagram-btn"
-            className="inline-flex items-center gap-2 rounded-full border border-white/50 px-8 py-4 text-base font-semibold text-white transition-colors duration-300 hover:bg-app hover:text-strong"
-          >
-            <Instagram className="h-4 w-4" /> {BUSINESS.instagramHandle}
-          </a>
-        </div>
-      </Reveal>
-    </div>
-  </section>
-);
 
 const Home = () => (
   <>
@@ -421,10 +340,8 @@ const Home = () => (
     <EditorialMarquee />
     <Intro />
     <Experiences />
-    <WhyUs />
-    <GalleryPreview />
     <Reviews />
-    <Location />
+    <WhyUs />
     <FinalCta />
   </>
 );
