@@ -1,237 +1,76 @@
 {
-  "theme": "light",
+  "theme": "light and dark toggle",
+  "vibe": "Warm, editorial, coastal, premium minimalist. No harsh neons, no purple/blue gradients.",
   "typography": {
-    "headings_font": "Cormorant Garamond",
-    "body_font": "Manrope",
-    "scale": {
-      "h1": "text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] font-medium",
-      "h2": "text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight font-medium",
-      "h3": "text-2xl md:text-3xl tracking-tight font-medium",
-      "h4": "text-sm md:text-base uppercase tracking-[0.2em] font-semibold text-gray-500",
-      "body": "text-base md:text-lg leading-relaxed text-[#1A1A1A]/80"
-    }
+    "headings": "Cormorant Garamond (Expressive, serif, tracking-tight for large text)",
+    "body": "Manrope (Clean, readable, sans-serif)",
+    "rules": "Keep existing photography-led minimalist-premium direction unchanged. Hierarchy: H1 max text-5xl/6xl, tight leading."
   },
   "colors": {
-    "primary": "#042F4B",
-    "secondary": "#4CA1A3",
-    "accent": "#D5C8B7",
-    "background": "#F7F5F0",
-    "text_primary": "#1A1A1A",
-    "text_secondary": "#4A4A4A"
+    "description": "Premium color system built from SurfKarnataka logo colors (sunset red/orange, warm gold) with a complementing deep ocean teal.",
+    "tailwind_tokens": {
+      "sunset-red": "#E4572E",
+      "warm-gold": "#F0A202",
+      "ocean-teal": "#0E4B4A",
+      "sand-white": "#F9F6F0",
+      "charcoal-teal": "#0A1C1C"
+    },
+    "css_variables": {
+      "light": {
+        "--background": "#F9F6F0",
+        "--surface": "#FFFFFF",
+        "--border": "#E5DED5",
+        "--text": "#0E4B4A",
+        "--text-muted": "#4A6767",
+        "--primary": "#E4572E",
+        "--primary-text": "#FFFFFF",
+        "--secondary": "#F0A202",
+        "--secondary-text": "#0A1C1C",
+        "--accent": "#0E4B4A",
+        "--accent-text": "#F9F6F0",
+        "--whatsapp-green": "#25D366"
+      },
+      "dark": {
+        "--background": "#0A1C1C",
+        "--surface": "#112828",
+        "--border": "#1E3B3B",
+        "--text": "#F4EFE6",
+        "--text-muted": "#A3B8B8",
+        "--primary": "#E4572E",
+        "--primary-text": "#FFFFFF",
+        "--secondary": "#F0A202",
+        "--secondary-text": "#0A1C1C",
+        "--accent": "#114B45",
+        "--accent-text": "#F4EFE6",
+        "--whatsapp-green": "#25D366"
+      }
+    },
+    "usage_rules": {
+      "primary_buttons": "Use sunset-red (--primary) for main CTAs. Ensures high visibility and warmth.",
+      "secondary_accents": "Use warm-gold (--secondary) for highlights, active states, or secondary badges.",
+      "headings": "In light theme, use deep ocean teal (--text) for high-contrast, premium typography. In dark theme, use warm off-white (--text).",
+      "dark_sections": "Use charcoal-teal (--background in dark mode) as an anchor. Do not use pure black.",
+      "text": "Never use pure white or pure black. Use sand-white / warm off-white for light text, and deep teal / charcoal-teal for dark text."
+    }
+  },
+  "components": {
+    "buttons": "Pill-shaped or rounded-md. Hover states should slightly lift (-translate-y-0.5) and add a subtle shadow (shadow-lg) matching the button hue. Ensure text contrast.",
+    "active_nav_pill": "Light theme: background surface/white with deep teal text, or warm-gold with dark text. Dark theme: background surface/112828 with warm off-white text.",
+    "theme_toggle": "Add a prominent but tasteful light/dark theme toggle in the header. Use standard sun/moon icons (lucide-react).",
+    "whatsapp_button": "Retain original WhatsApp green (#25D366). It stands outside the core brand palette but is necessary for conversion."
   },
   "visual_enhancers": {
-    "texture": "Subtle noise overlay on backgrounds to remove digital flatness. Keeps it organic and natural.",
-    "border": "Use 1px borders using border-[#D5C8B7] to create elegant architectural lines. Avoid heavy drop shadows.",
-    "hover_effects": "Image zoom on hover (`scale-105` with `duration-700 ease-out`). Text color shifts subtly.",
-    "overlays": "Hero image max overlay opacity: `bg-black/30`. Keep it light, preserve the photography."
+    "spacing": "Generous spacing. p-8 to p-16 for section padding. Let the photography breathe.",
+    "borders": "Delicate 1px borders using the --border variable. No heavy strokes.",
+    "shadows": "Soft, diffuse ambient shadows for surfaces in light theme. In dark theme, use inner borders (border-white/10) instead of heavy shadows."
   },
-  "layouts": {
-    "general": "Editorial style, left-aligned, asymmetrical, heavy negative space (`py-24`, `gap-16`). Never center-everything.",
-    "hero": "Cinematic full height (100vh). Left-aligned huge typography with line-by-line mask reveal animation. Content anchored to bottom.",
-    "experiences": "Bento Grid Mode A: Asymmetrical layout mixing square, tall, and wide photographic cards with deep negative space.",
-    "gallery": "Masonry or irregular grid, mixing 3:4 and 16:9 aspect ratios. Implement filterable buttons and a lightbox.",
-    "about": "Magazine style, two-column layouts where text and imagery overlap slightly to create depth."
-  },
-  "motion": {
-    "scroll": "Use Lenis for premium momentum scroll.",
-    "hero_reveal": "Framer Motion line-by-line staggered text reveal (opacity and y-axis translation).",
-    "parallax": "Subtle y-axis parallax on large images during scroll using framer-motion useScroll.",
-    "marquee": "Slow-moving editorial ribbon. Pale background (`#D5C8B7`), dark serif text. `gap-24`."
-  },
-  "components_to_use": [
-    {
-      "name": "Header",
-      "description": "Sticky top, crystal glassmorphism `backdrop-blur-xl bg-[#F7F5F0]/70`. Minimal links left, Book Now CTA right. CRITICAL: DO NOT use complete transparent background in header."
-    },
-    {
-      "name": "Floating WhatsApp",
-      "description": "Fixed bottom right circular button, #25D366 color, pulsing animation. Opens WhatsApp with prefilled message."
-    },
-    {
-      "name": "Marquee",
-      "description": "react-fast-marquee. Use warm sand background with charcoal serif text."
-    },
-    {
-      "name": "Filterable Gallery",
-      "description": "Custom grid component with state-based filtering (All, Action, Lessons, Lifestyle) and an image lightbox modal."
-    }
-  ],
-  "accessibility": {
-    "contrast": "Ensure text over images has sufficient contrast or subtle text-shadow/gradient overlay.",
-    "data_testid": "Add data-testid to all interactive elements."
-  },
-  "media": {
-    "image_urls": {
-      "hero_background": {
-        "url": "https://images.unsplash.com/photo-1613693692851-204a395d0ec7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Silhouette surfer at sunset on South Asian coast",
-        "note": "Replaced with an authentic warm-water silhouette that fits the coastal Indian vibe perfectly, avoiding Western tropes."
-      },
-      "experiences_beginner": {
-        "url": "https://images.unsplash.com/photo-1645484031499-d3d7483e3e5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Indian surfer standing in ocean holding board",
-        "note": "Features a genuine South Asian local in the water with a board, replacing Western tourists with authentic representation."
-      },
-      "experiences_intermediate": {
-        "url": "https://images.unsplash.com/photo-1630697863146-aa9bee30ee73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Indian surfer riding a sea wave",
-        "note": "An authentic Indian surfer riding a wave during daytime, establishing genuine local surf culture."
-      },
-      "experiences_private": {
-        "url": "https://images.unsplash.com/photo-1599237109212-0e2a94156af8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Portrait of dark-skinned Indian surfer in the water",
-        "note": "A genuine portrait of a South Asian local in the water, perfect for an intimate instructor/private lesson feel."
-      },
-      "experiences_group": {
-        "url": "https://images.unsplash.com/photo-1609365635346-524d0024684f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Local person carrying surfboard on Goa beach",
-        "note": "Shot from Goa featuring locals on the beach with boards, completely avoiding the Western resort cliché."
-      },
-      "about_instructor": {
-        "url": "https://images.unsplash.com/photo-1746106075291-92d791c187e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
-        "description": "South Asian surf instructor looking at the ocean",
-        "note": "Authentic South Asian instructor looking out at the Indian Ocean coast, giving a real sense of local expertise."
-      },
-      "location_gokarna": {
-        "url": "https://images.unsplash.com/photo-1734120113639-0d034e85c377?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Gokarna coast view from lush hill",
-        "note": "Authentic rugged Gokarna coastline showing the lush green hills meeting the Arabian Sea, exactly matching the region."
-      },
-      "gallery_action": {
-        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Action shot of local surfing in Goa",
-        "note": "Great action shot of a surfer in Goa, showing real local wave riding instead of a Hawaiian wave."
-      },
-      "gallery_surfing_1": {
-        "url": "https://images.unsplash.com/photo-1520443240718-fce21901db79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Dark-skinned surfer riding a wave",
-        "note": "Dark-skinned surfer riding an Asian wave, grounding the action locally in warm waters."
-      },
-      "gallery_surfing_2": {
-        "url": "https://images.unsplash.com/photo-1527731149372-fae504a1185f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Aerial view of surfers in tropical waters",
-        "note": "Aerial view that closely matches the deep tropical blues of the South Indian coast."
-      },
-      "gallery_surfing_3": {
-        "url": "https://images.unsplash.com/photo-1645484013576-1bc341a4207f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHxpbmRpYSUyMHN1cmZpbmd8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Person swimming in the ocean at sunset",
-        "note": "Authentic warm sunset swimming in the Indian Ocean, replacing generic Western beach shots."
-      },
-      "gallery_lessons_1": {
-        "url": "https://images.unsplash.com/photo-1645484013523-a8f0cae92612?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Indian surfer standing on a beach with board",
-        "note": "Authentic South Asian surfer on a local beach, setting the right tone for Indian lessons."
-      },
-      "gallery_lessons_2": {
-        "url": "https://images.unsplash.com/photo-1554787990-fd7a431e3b0a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Gokarna beach scene with locals",
-        "note": "Gokarna beach scene with locals in the water, highly authentic."
-      },
-      "gallery_lessons_3": {
-        "url": "https://images.unsplash.com/photo-1590393275627-0c48482c60e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHw0fHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Locals walking on a sandy beach in Goa",
-        "note": "Real local beach activity in Goa, representing the everyday student experience."
-      },
-      "gallery_students_1": {
-        "url": "https://images.unsplash.com/photo-1593359652766-b77c5795bd65?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Everyday beachgoers at Gokarna",
-        "note": "Everyday local beachgoers in Gokarna, reflecting the authentic vibe."
-      },
-      "gallery_students_2": {
-        "url": "https://images.unsplash.com/photo-1668487103952-299943240474?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGVzc29uJTIwYXNpYXxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Tropical sandy beach with palms",
-        "note": "Typical South Asian shoreline with palms, perfect for beginners."
-      },
-      "gallery_students_3": {
-        "url": "https://images.unsplash.com/photo-1772791615983-c13f6e773082?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Local fishing boats on tropical sand",
-        "note": "Working coastal beach mirroring Karnataka's fishing and surfing overlap."
-      },
-      "gallery_instructors_1": {
-        "url": "https://images.unsplash.com/photo-1746106075291-92d791c187e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Candid shot of South Asian surf instructor",
-        "note": "Candid, authentic shot of a South Asian surf instructor in their environment."
-      },
-      "gallery_instructors_2": {
-        "url": "https://images.unsplash.com/photo-1599237109212-0e2a94156af8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Portrait of Indian surfer in the water",
-        "note": "Genuine portrait of an Indian surfer that reads perfectly as an instructor."
-      },
-      "gallery_instructors_3": {
-        "url": "https://images.unsplash.com/photo-1645484013523-a8f0cae92612?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Local Indian surfer ready for the water",
-        "note": "Portrait of a local surfer ready for the water, matching the real aesthetic."
-      },
-      "gallery_beach_ocean_1": {
-        "url": "https://images.unsplash.com/photo-1650730005180-2c849af5d6cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxrZXJhbGElMjBjb2FzdHxlbnwwfHx8fDE3OTM1MTc5OTR8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Rugged red-earth and green coast in Kerala",
-        "note": "Rugged red-earth and green coast typical of Kerala/Karnataka shorelines."
-      },
-      "gallery_beach_ocean_2": {
-        "url": "https://images.unsplash.com/photo-1646299588107-40fabeca07da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxrZXJhbGElMjBjb2FzdHxlbnwwfHx8fDE3OTM1MTc5OTR8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Sweeping view of Kerala cliffs and ocean",
-        "note": "Sweeping view of the dramatic cliffs and ocean found along the Indian west coast."
-      },
-      "gallery_beach_ocean_3": {
-        "url": "https://images.unsplash.com/photo-1517053589573-a5473fadffbd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Lush tropical headland on the Indian Ocean",
-        "note": "Lush tropical headland perfectly capturing the Arabian Sea / Indian Ocean vibe."
-      },
-      "gallery_lifestyle_1": {
-        "url": "https://images.unsplash.com/photo-1559140097-6e6ca59e70ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfboards resting on dark coastal sand",
-        "note": "Boards resting on the dark, natural sand characteristic of the Indian west coast."
-      },
-      "gallery_lifestyle_2": {
-        "url": "https://images.unsplash.com/photo-1586164354790-a6782cfa8794?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfboard under tropical palms",
-        "note": "Surfboard under tropical palms typical of the South Indian lifestyle."
-      },
-      "gallery_lifestyle_3": {
-        "url": "https://images.unsplash.com/photo-1621951289270-b942dc5f4320?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Surfboard lying on a beach in Goa",
-        "note": "Aesthetic board shot taken on a real beach in Goa."
-      },
-      "gallery_lifestyle_4": {
-        "url": "https://images.unsplash.com/photo-1645484031373-ca139e67d7ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGlmZXN0eWxlJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Minimalist board shot on Indian sand",
-        "note": "Minimalist board shot resting directly on authentic Indian coastal sand."
-      },
-      "gallery_lifestyle_5": {
-        "url": "https://images.unsplash.com/photo-1641192936002-80e89555786f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Dramatic black volcanic rocks of Gokarna coast",
-        "note": "Shows the dramatic black volcanic rocks found specifically along the Gokarna coast."
-      },
-      "intro_side": {
-        "url": "https://images.unsplash.com/photo-1645493896628-d6189c7c4626?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Authentic lifestyle portrait of a dark-skinned surfer",
-        "note": "Authentic lifestyle portrait of a dark-skinned surfer by the ocean, fitting the local vibe perfectly."
-      }
-    }
-  },
-  "instructions_to_main_agent": [
-    "Install `lucide-react`, `framer-motion`, `react-fast-marquee`, and `lenis` (or `@studio-freight/lenis`) as they are required for premium web functionality.",
-    "Use react-router-dom to build the 5 specific pages (Home, Surf Lessons, About Us, Gallery, Contact) inside standard .js / .jsx files.",
-    "IMPORTANT: Write .js or .jsx files, DO NOT output .tsx files as this is a JavaScript project.",
-    "Use raw HTML/Tailwind for structural marketing layouts. Avoid wrapping entire marketing pages in Shadcn standard 'Card' components.",
-    "Implement scroll animations with framer-motion (e.g., `whileInView`, `viewport={{ once: true }}`).",
-    "Gallery page must have a filter system (All, Action, Lessons, Lifestyle) and an image lightbox (a full-screen fixed div modal overlay upon click).",
-    "Contact page form should utilize HTML/Shadcn inputs and a submit handler that opens the floating WhatsApp link with prefilled details."
-  ],
-  "GENERAL UI UX DESIGN GUIDELINES": [
-    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing.",
-    "Header must not have a fully transparent background. Use glassmorphism or solid backgrounds."
-  ],
   "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
-    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
-    "Do not apply universal transition (`transition: all`). Add transitions for specific interactive elements only.",
-    "Do not center align the app container. No `.App { text-align: center; }`.",
-    "Use 2-3x more spacing (e.g. `py-24`, `p-12`) than feels comfortable.",
-    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use `lucide-react`.",
-    "NEVER use placeholder URLs. Use the exact image_urls provided in this JSON.",
-    "All interactive elements MUST include a `data-testid` attribute (e.g., `data-testid=\"book-now-btn\"`).",
-    "Header must not have a fully transparent background. Use glassmorphism (`backdrop-blur-xl bg-[#F7F5F0]/70`) so navigation links are readable over images.",
-    "Follow mobile-first responsive design strictly. Add responsive typography (`text-4xl md:text-6xl`).",
-    "Ensure `data-testid` is applied on all buttons, links, form inputs, and dynamic UI states."
+    "Always use the CSS variables defined in this document for colors to ensure the light/dark toggle works seamlessly.",
+    "All files are .js (not .tsx) - ensure valid JSX without TypeScript type annotations.",
+    "DO NOT use completely transparent backgrounds for headers or dropdowns. In light theme, use backdrop-blur with bg-white/70. In dark theme, use bg-[#0A1C1C]/80 with backdrop-blur.",
+    "Every interaction needs micro-animations (e.g. hover:scale-105, transition-all duration-300).",
+    "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., data-testid='theme-toggle-button').",
+    "Ensure image constraints on mobile (e.g. max-h-[80vh]) to prevent viewport blocking.",
+    "Implement the theme toggle functionality globally using a React context or Zustand store, attaching a 'dark' class to the HTML/body element."
   ]
 }

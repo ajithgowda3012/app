@@ -73,6 +73,21 @@ and the Indian coastline (Gokarna/Kerala/Goa-style golden shores); foreign/Weste
 imagery removed. All 24 config URLs verified real; zero broken images; hero is now a
 local surfer against a golden Gokarna headland.
 
+## Re-theme + Reviews + Dark mode (2026-11-01)
+- Colour system re-derived from the SurfKarnataka logo: sunset red/orange (#E4572E) primary,
+  warm gold (#F0A202) secondary, deep ocean teal (#0E4B4A) complementing anchor, sand-white
+  (#F9F6F0) light bg, charcoal-teal (#0A1C1C) dark bg. All components converted to CSS
+  variables (index.css) with Tailwind tokens (tailwind.config.js).
+- Light/dark theme toggle in the floating nav (context/ThemeContext.jsx + ThemeToggle.jsx),
+  persisted to localStorage, `dark` class on <html>. WhatsApp green stays as-is.
+- Real Google reviews transcribed from owner screenshots (REVIEWS in site.config.js):
+  Nandhini Raj, Suhas Vijay, Bhargav VC, Shalini Ananth, Andrew Joseph. Built ReviewsWall.jsx
+  — auto-scrolling horizontal marquee (pause on hover) with star badges + "Read all reviews
+  on Google" link. Verified marquee animates and no horizontal overflow.
+- Performance: hero image preloaded; non-hero images lazy-loaded.
+- Verified live via browser screenshots (testing_agent tool not available in this run —
+  verified directly with the screenshot tool instead).
+
 ## Implemented (2026-11-01)
 - Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
   footer (on cream card), favicon.png, apple-touch-icon (assets in

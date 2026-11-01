@@ -15,10 +15,10 @@ export const WhatsAppButton = ({
   const base =
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300";
   const tones = {
-    solid: "bg-ocean text-cream hover:bg-ocean-deep",
-    outline: "border border-ocean text-ocean hover:bg-ocean hover:text-cream",
-    light: "bg-cream text-ocean hover:bg-sand-light",
-    outlineLight: "border border-cream/70 text-cream hover:bg-cream hover:text-ocean",
+    solid: "bg-[var(--accent)] text-white hover:bg-[var(--accent-deep)]",
+    outline: "border border-[var(--accent)] text-strong hover:bg-[var(--accent)] hover:text-white",
+    light: "bg-app text-strong hover:bg-[var(--secondary)]",
+    outlineLight: "border border-white/60 text-white hover:bg-app hover:text-strong",
   };
   return (
     <a
@@ -51,9 +51,9 @@ export const LinkButton = ({
   const base =
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300";
   const tones = {
-    solid: "bg-ocean text-cream hover:bg-ocean-deep",
-    outline: "border border-ocean text-ocean hover:bg-ocean hover:text-cream",
-    outlineLight: "border border-cream/70 text-cream hover:bg-cream hover:text-ocean",
+    solid: "bg-[var(--accent)] text-white hover:bg-[var(--accent-deep)]",
+    outline: "border border-[var(--accent)] text-strong hover:bg-[var(--accent)] hover:text-white",
+    outlineLight: "border border-white/60 text-white hover:bg-app hover:text-strong",
   };
   return (
     <Link to={to} data-testid={testId} className={`${base} ${tones[tone]} ${className}`}>

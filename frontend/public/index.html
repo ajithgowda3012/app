@@ -11,6 +11,16 @@
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="icon" type="image/png" href="%PUBLIC_URL%/assets/favicon.png" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/apple-touch-icon.png" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <script>
+            (function () {
+                try {
+                    var t = localStorage.getItem("sk-theme");
+                    if (t === "dark") document.documentElement.classList.add("dark");
+                } catch (e) {}
+            })();
+        </script>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SurfKarnataka" />
         <meta property="og:title" content="SurfKarnataka | Surfing Lessons in Gokarna, Karnataka" />

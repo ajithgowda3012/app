@@ -8,19 +8,17 @@ import {
   Waves,
   MapPin,
   Instagram,
-  ExternalLink,
-  Quote,
 } from "lucide-react";
 import Seo from "@/components/Seo";
 import Reveal from "@/components/Reveal";
 import ExperienceCard from "@/components/ExperienceCard";
+import ReviewsWall from "@/components/ReviewsWall";
 import { WhatsAppButton } from "@/components/Buttons";
 import {
   BUSINESS,
   EXPERIENCES,
   HIGHLIGHTS,
   GALLERY,
-  REVIEWS,
   MARQUEE_ITEMS,
   IMAGES,
   img,
@@ -41,7 +39,7 @@ const Hero = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1.08, 1.22]);
 
   return (
-    <section ref={ref} className="noise relative flex min-h-[100svh] items-end overflow-hidden bg-ocean">
+    <section ref={ref} className="noise relative flex min-h-[100svh] items-end overflow-hidden bg-[var(--accent)]">
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
           src={img(IMAGES.hero, 2400)}
@@ -57,11 +55,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.9 }}
-          className="mb-7 text-xs font-semibold uppercase tracking-[0.34em] text-sand md:text-sm"
+          className="mb-7 text-xs font-semibold uppercase tracking-[0.34em] text-[var(--secondary)] md:text-sm"
         >
           Surf School · Gokarna, Karnataka
         </motion.p>
-        <h1 className="font-display text-6xl font-medium leading-[0.92] tracking-tight text-cream sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="font-display text-6xl font-medium leading-[0.92] tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
           {["Find Your Wave.", "Discover Your", "Freedom."].map((line, i) => (
             <span key={line} className="block overflow-hidden pb-1.5">
               <motion.span
@@ -80,7 +78,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.95, duration: 0.9 }}
-          className="mt-7 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg"
+          className="mt-7 max-w-xl text-base leading-relaxed text-white/90 md:text-lg"
         >
           Experience the joy of surfing with SurfKarnataka in Gokarna, Karnataka.
         </motion.p>
@@ -100,7 +98,7 @@ const Hero = () => {
           <Link
             to="/lessons"
             data-testid="hero-explore-lessons-btn"
-            className="group inline-flex items-center gap-2 rounded-full border border-cream/60 px-8 py-4 text-base font-semibold text-cream transition-colors duration-300 hover:bg-cream hover:text-ocean"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/50 px-8 py-4 text-base font-semibold text-white transition-colors duration-300 hover:bg-app hover:text-strong"
           >
             Explore Surf Lessons
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -111,7 +109,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-8 right-8 hidden text-cream/60 md:block"
+        className="absolute bottom-8 right-8 hidden text-white/65 md:block"
         aria-hidden="true"
       >
         <motion.div
@@ -120,7 +118,7 @@ const Hero = () => {
           className="flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em]"
         >
           Scroll
-          <span className="h-10 w-px bg-cream/40" />
+          <span className="h-10 w-px bg-app/40" />
         </motion.div>
       </motion.div>
     </section>
@@ -128,12 +126,12 @@ const Hero = () => {
 };
 
 const EditorialMarquee = () => (
-  <div className="border-y border-ocean/10 bg-sand py-5" data-testid="editorial-marquee">
+  <div className="border-y border-[var(--accent)]/10 bg-[var(--secondary)] py-5" data-testid="editorial-marquee">
     <Marquee speed={32} gradient={false} pauseOnHover>
       {MARQUEE_ITEMS.map((item) => (
         <span key={item} className="mx-10 flex items-center gap-10">
-          <span className="font-display text-2xl italic text-ocean md:text-3xl">{item}</span>
-          <Waves className="h-5 w-5 text-turquoise" aria-hidden="true" />
+          <span className="font-display text-2xl italic text-strong md:text-3xl">{item}</span>
+          <Waves className="h-5 w-5 text-brand" aria-hidden="true" />
         </span>
       ))}
     </Marquee>
@@ -146,12 +144,12 @@ const Intro = () => (
       <div className="md:col-span-7">
         <Reveal><p className="eyebrow">Welcome to SurfKarnataka</p></Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
             Your Surfing Journey Starts Here.
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-charcoal/75 md:text-lg">
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-body md:text-lg">
             SurfKarnataka is a surf school on the shores of Gokarna — a quiet coastal town
             where the Arabian Sea rolls in slow and steady. Whether you have never stood on
             a board or you are chasing cleaner rides, we teach you to read the ocean, move
@@ -159,7 +157,7 @@ const Intro = () => (
           </p>
         </Reveal>
         <Reveal delay={0.3}>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-charcoal/75 md:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-body md:text-lg">
             Every session is guided by an instructor in the water with you. You learn at your
             pace, on real Gokarna waves, and leave with more than a lesson — an active,
             honest coastal experience you will remember.
@@ -170,7 +168,7 @@ const Intro = () => (
             <Link
               to="/lessons"
               data-testid="intro-lessons-link"
-              className="group inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:border-turquoise hover:text-turquoise"
+              className="group inline-flex items-center gap-2 border-b border-[var(--accent)] pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-strong transition-colors duration-300 hover:border-brand hover:text-brand"
             >
               See How You'll Learn
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -180,7 +178,7 @@ const Intro = () => (
       </div>
       <div className="md:col-span-5">
         <Reveal delay={0.2} className="relative h-full">
-          <div className="group overflow-hidden rounded-2xl border border-sand/70 md:mt-16">
+          <div className="group overflow-hidden rounded-2xl border border-appborder md:mt-16">
             <img
               src={img(IMAGES.introSide, 1200)}
               alt="Surf lesson on the beach in warm light"
@@ -195,13 +193,13 @@ const Intro = () => (
 );
 
 const Experiences = () => (
-  <section className="bg-sand-light/50 py-24 md:py-36">
+  <section className="bg-surface py-24 md:py-36">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
           <Reveal><p className="eyebrow">Surfing Experiences</p></Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 max-w-xl font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
+            <h2 className="mt-6 max-w-xl font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
               Choose How You Want to Surf.
             </h2>
           </Reveal>
@@ -210,7 +208,7 @@ const Experiences = () => (
           <Link
             to="/lessons"
             data-testid="experiences-view-all-link"
-            className="group inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:border-turquoise hover:text-turquoise"
+            className="group inline-flex items-center gap-2 border-b border-[var(--accent)] pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-strong transition-colors duration-300 hover:border-brand hover:text-brand"
           >
             All Surf Lessons
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -225,7 +223,7 @@ const Experiences = () => (
         ))}
       </div>
       <Reveal delay={0.2}>
-        <p className="mt-10 text-sm text-charcoal/60">
+        <p className="mt-10 text-sm text-muted">
           Session details, schedules and pricing are shared on enquiry — message us on
           WhatsApp and we will plan the right session for you.
         </p>
@@ -235,26 +233,26 @@ const Experiences = () => (
 );
 
 const WhyUs = () => (
-  <section className="bg-ocean py-24 text-cream md:py-36">
+  <section className="bg-[var(--accent)] py-24 text-white md:py-36">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal><p className="eyebrow text-sand">Why SurfKarnataka</p></Reveal>
+      <Reveal><p className="eyebrow text-[var(--secondary)]">Why SurfKarnataka</p></Reveal>
       <Reveal delay={0.1}>
         <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight md:text-6xl">
           The Ocean, the Town, the Way We Teach.
         </h2>
       </Reveal>
-      <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-cream/15 bg-cream/15 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-app/15 sm:grid-cols-2 lg:grid-cols-4">
         {HIGHLIGHTS.map((h, i) => (
           <Reveal key={h.title} delay={0.08 * i} className="h-full">
             <div
               data-testid={`highlight-${i}`}
-              className="flex h-full flex-col bg-ocean p-8 transition-colors duration-500 hover:bg-ocean-deep md:p-10"
+              className="flex h-full flex-col bg-[var(--accent)] p-8 transition-colors duration-500 hover:bg-[var(--accent-deep)] md:p-10"
             >
-              <span className="font-display text-4xl italic text-turquoise">
+              <span className="font-display text-4xl italic text-brand">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-6 font-display text-2xl font-medium tracking-tight">{h.title}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-cream/70">{h.text}</p>
+              <p className="mt-4 text-sm leading-relaxed text-white/75">{h.text}</p>
             </div>
           </Reveal>
         ))}
@@ -272,7 +270,7 @@ const GalleryPreview = () => {
           <div>
             <Reveal><p className="eyebrow">Moments from the Water</p></Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
+              <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
                 Gokarna, Through Our Lens.
               </h2>
             </Reveal>
@@ -283,7 +281,7 @@ const GalleryPreview = () => {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="gallery-instagram-link"
-              className="inline-flex items-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[var(--accent-deep)]"
             >
               <Instagram className="h-4 w-4" /> {BUSINESS.instagramHandle}
             </a>
@@ -313,51 +311,7 @@ const GalleryPreview = () => {
   );
 };
 
-const Reviews = () => (
-  <section className="border-y border-sand/70 bg-cream py-24 md:py-36">
-    <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal><p className="eyebrow">What Surfers Say</p></Reveal>
-      <Reveal delay={0.1}>
-        <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
-          Straight from the Shore.
-        </h2>
-      </Reveal>
-      {REVIEWS.length > 0 ? (
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {REVIEWS.map((r, i) => (
-            <Reveal key={r.name} delay={0.08 * i}>
-              <figure data-testid={`review-${i}`} className="flex h-full flex-col rounded-2xl border border-sand/70 bg-white p-8">
-                <Quote className="h-6 w-6 text-turquoise" aria-hidden="true" />
-                <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-charcoal/75 md:text-base">{r.text}</blockquote>
-                <figcaption className="mt-6 text-sm font-semibold text-ocean">{r.name}</figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      ) : (
-        <Reveal delay={0.2}>
-          <div data-testid="reviews-google-fallback" className="mt-16 flex max-w-3xl flex-col items-start gap-6 rounded-2xl border border-sand/70 bg-white p-8 md:p-12">
-            <Quote className="h-8 w-8 text-turquoise" aria-hidden="true" />
-            <p className="text-base leading-relaxed text-charcoal/75 md:text-lg">
-              We would rather show you real words than make them up. Read what surfers and
-              travellers say about us on our Google Business profile — and after your
-              session, tell the world how it went.
-            </p>
-            <a
-              href={BUSINESS.googleBusiness}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="find-us-on-google-btn"
-              className="inline-flex items-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep"
-            >
-              Find us on Google <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-        </Reveal>
-      )}
-    </div>
-  </section>
-);
+const Reviews = () => <ReviewsWall />;
 
 const Location = () => (
   <section className="py-24 md:py-36">
@@ -365,15 +319,15 @@ const Location = () => (
       <div>
         <Reveal><p className="eyebrow">Location</p></Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
             Find Us in Gokarna.
           </h2>
         </Reveal>
         <Reveal delay={0.2}>
-          <address className="mt-8 flex items-start gap-3 text-base not-italic leading-relaxed text-charcoal/75">
-            <MapPin className="mt-1 h-5 w-5 shrink-0 text-turquoise" aria-hidden="true" />
+          <address className="mt-8 flex items-start gap-3 text-base not-italic leading-relaxed text-body">
+            <MapPin className="mt-1 h-5 w-5 shrink-0 text-brand" aria-hidden="true" />
             <span>
-              <strong className="font-semibold text-charcoal">{BUSINESS.legalName}</strong>
+              <strong className="font-semibold text-strong">{BUSINESS.legalName}</strong>
               <br />
               {BUSINESS.addressLines.map((line) => (
                 <span key={line}>{line}<br /></span>
@@ -388,7 +342,7 @@ const Location = () => (
               target="_blank"
               rel="noopener noreferrer"
               data-testid="location-directions-btn"
-              className="inline-flex items-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[var(--accent-deep)]"
             >
               <MapPin className="h-4 w-4" /> Get Directions
             </a>
@@ -397,7 +351,7 @@ const Location = () => (
         </Reveal>
       </div>
       <Reveal delay={0.2}>
-        <div className="overflow-hidden rounded-2xl border border-sand/70">
+        <div className="overflow-hidden rounded-2xl border border-appborder">
           <iframe
             title="Map showing SurfKarnataka in Gokarna, Karnataka"
             src={BUSINESS.mapsEmbed}
@@ -421,15 +375,15 @@ const FinalCta = () => (
       loading="lazy"
       className="absolute inset-0 h-full w-full object-cover"
     />
-    <div className="absolute inset-0 bg-ocean/70" aria-hidden="true" />
+    <div className="absolute inset-0 bg-[var(--accent)]/70" aria-hidden="true" />
     <div className="relative mx-auto max-w-7xl px-5 md:px-10">
       <Reveal>
-        <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight text-cream md:text-6xl lg:text-7xl">
+        <h2 className="max-w-3xl font-display text-4xl font-medium leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
           Your Next Wave Is Waiting.
         </h2>
       </Reveal>
       <Reveal delay={0.15}>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/85 md:text-lg">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
           Ready to experience surfing in Gokarna? Get in touch with us and plan your session.
         </p>
       </Reveal>
@@ -447,7 +401,7 @@ const FinalCta = () => (
             target="_blank"
             rel="noopener noreferrer"
             data-testid="final-cta-instagram-btn"
-            className="inline-flex items-center gap-2 rounded-full border border-cream/60 px-8 py-4 text-base font-semibold text-cream transition-colors duration-300 hover:bg-cream hover:text-ocean"
+            className="inline-flex items-center gap-2 rounded-full border border-white/50 px-8 py-4 text-base font-semibold text-white transition-colors duration-300 hover:bg-app hover:text-strong"
           >
             <Instagram className="h-4 w-4" /> {BUSINESS.instagramHandle}
           </a>

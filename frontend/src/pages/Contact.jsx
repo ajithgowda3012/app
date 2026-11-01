@@ -13,7 +13,7 @@ import { BUSINESS, EXPERIENCES, waLink, bookingMessage } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
 const inputClass =
-  "w-full rounded-xl border border-sand bg-white px-4 py-3.5 text-sm text-charcoal placeholder:text-charcoal/40 focus:border-ocean focus:outline-none focus:ring-2 focus:ring-ocean/15";
+  "w-full rounded-xl border border-appborder bg-surface px-4 py-3.5 text-sm text-strong placeholder:text-muted focus:border-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/15";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -54,16 +54,16 @@ const Contact = () => {
         description="Get in touch with SurfKarnataka in Gokarna, Karnataka — call, WhatsApp, directions and a quick enquiry form to plan your surfing session."
       />
 
-      <section className="noise relative overflow-hidden bg-ocean pb-20 pt-40 text-cream md:pb-28 md:pt-56">
+      <section className="noise relative overflow-hidden bg-[var(--accent)] pb-20 pt-40 text-white md:pb-28 md:pt-56">
         <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <Reveal><p className="eyebrow text-sand">Contact</p></Reveal>
+          <Reveal><p className="eyebrow text-[var(--secondary)]">Contact</p></Reveal>
           <Reveal delay={0.1}>
             <h1 className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[0.92] tracking-tight md:text-7xl">
               Let's Get You Into The Water.
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream/80 md:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
               Questions about sessions, timings or the waves this week? Reach out — we
               reply personally, usually on WhatsApp.
             </p>
@@ -75,12 +75,12 @@ const Contact = () => {
         <div className="mx-auto grid max-w-7xl gap-16 px-5 md:px-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <Reveal>
-              <h2 className="font-display text-3xl font-medium tracking-tight text-ocean md:text-4xl">
+              <h2 className="font-display text-3xl font-medium tracking-tight text-strong md:text-4xl">
                 {BUSINESS.legalName}
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <address className="mt-6 text-base not-italic leading-relaxed text-charcoal/75">
+              <address className="mt-6 text-base not-italic leading-relaxed text-body">
                 {BUSINESS.addressLines.map((line) => (
                   <span key={line}>{line}<br /></span>
                 ))}
@@ -92,14 +92,14 @@ const Contact = () => {
                   href={BUSINESS.phoneHref}
                   data-testid="contact-call-btn"
                   onClick={() => trackEvent("call_click", { source: "contact_page" })}
-                  className="flex items-center gap-4 rounded-2xl border border-sand/70 bg-white p-5 transition-colors duration-300 hover:border-ocean"
+                  className="flex items-center gap-4 rounded-2xl border border-appborder bg-surface p-5 transition-colors duration-300 hover:border-[var(--accent)]"
                 >
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ocean text-cream">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--accent)] text-white">
                     <Phone className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Call Now</span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.phoneDisplay}</span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Call Now</span>
+                    <span className="mt-1 block text-sm font-semibold text-strong">{BUSINESS.phoneDisplay}</span>
                   </span>
                 </a>
                 <a
@@ -108,14 +108,14 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   data-testid="contact-whatsapp-btn"
                   onClick={() => trackEvent("whatsapp_click", { source: "contact_page" })}
-                  className="flex items-center gap-4 rounded-2xl border border-sand/70 bg-white p-5 transition-colors duration-300 hover:border-ocean"
+                  className="flex items-center gap-4 rounded-2xl border border-appborder bg-surface p-5 transition-colors duration-300 hover:border-[var(--accent)]"
                 >
                   <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white">
                     <MessageCircle className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Chat on WhatsApp</span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.phoneDisplay}</span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Chat on WhatsApp</span>
+                    <span className="mt-1 block text-sm font-semibold text-strong">{BUSINESS.phoneDisplay}</span>
                   </span>
                 </a>
                 <a
@@ -123,14 +123,14 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="contact-instagram-btn"
-                  className="flex items-center gap-4 rounded-2xl border border-sand/70 bg-white p-5 transition-colors duration-300 hover:border-ocean"
+                  className="flex items-center gap-4 rounded-2xl border border-appborder bg-surface p-5 transition-colors duration-300 hover:border-[var(--accent)]"
                 >
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-turquoise text-cream">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand text-white">
                     <Instagram className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Instagram</span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.instagramHandle}</span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Instagram</span>
+                    <span className="mt-1 block text-sm font-semibold text-strong">{BUSINESS.instagramHandle}</span>
                   </span>
                 </a>
                 <a
@@ -138,14 +138,14 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="contact-directions-btn"
-                  className="flex items-center gap-4 rounded-2xl border border-sand/70 bg-white p-5 transition-colors duration-300 hover:border-ocean"
+                  className="flex items-center gap-4 rounded-2xl border border-appborder bg-surface p-5 transition-colors duration-300 hover:border-[var(--accent)]"
                 >
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sand text-ocean">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--secondary)] text-strong">
                     <MapPin className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Get Directions</span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">Gokarna, Karnataka</span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Get Directions</span>
+                    <span className="mt-1 block text-sm font-semibold text-strong">Gokarna, Karnataka</span>
                   </span>
                 </a>
               </div>
@@ -156,13 +156,13 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="contact-google-business-link"
-                className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-ocean transition-colors duration-300 hover:text-turquoise"
+                className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-strong transition-colors duration-300 hover:text-brand"
               >
                 Find us on Google Business <ExternalLink className="h-4 w-4" />
               </a>
             </Reveal>
             <Reveal delay={0.25}>
-              <div className="mt-10 overflow-hidden rounded-2xl border border-sand/70">
+              <div className="mt-10 overflow-hidden rounded-2xl border border-appborder">
                 <iframe
                   title="Map showing SurfKarnataka in Gokarna, Karnataka"
                   src={BUSINESS.mapsEmbed}
@@ -178,25 +178,25 @@ const Contact = () => {
 
           <div>
             <Reveal delay={0.1}>
-              <form data-testid="contact-form" onSubmit={handleSubmit} className="rounded-2xl border border-sand/70 bg-white p-7 md:p-10">
-                <h2 className="font-display text-3xl font-medium tracking-tight text-ocean">
+              <form data-testid="contact-form" onSubmit={handleSubmit} className="rounded-2xl border border-appborder bg-surface p-7 md:p-10">
+                <h2 className="font-display text-3xl font-medium tracking-tight text-strong">
                   Plan Your Session
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                <p className="mt-3 text-sm leading-relaxed text-muted">
                   Fill this in and we will open WhatsApp with your enquiry ready to send.
                   Nothing is stored or submitted anywhere else.
                 </p>
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="cf-name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Your Name *</label>
+                    <label htmlFor="cf-name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Your Name *</label>
                     <input id="cf-name" data-testid="form-name-input" type="text" required value={form.name} onChange={set("name")} placeholder="Full name" className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Phone Number *</label>
+                    <label htmlFor="cf-phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Phone Number *</label>
                     <input id="cf-phone" data-testid="form-phone-input" type="tel" required value={form.phone} onChange={set("phone")} placeholder="+91 ..." className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-experience" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Interested Experience</label>
+                    <label htmlFor="cf-experience" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Interested Experience</label>
                     <select id="cf-experience" data-testid="form-experience-select" value={form.experience} onChange={set("experience")} className={inputClass}>
                       <option value="">Not sure yet</option>
                       {EXPERIENCES.map((exp) => (
@@ -205,26 +205,26 @@ const Contact = () => {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="cf-date" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Preferred Date</label>
+                    <label htmlFor="cf-date" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Preferred Date</label>
                     <input id="cf-date" data-testid="form-date-input" type="date" value={form.date} onChange={set("date")} className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-participants" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Number of Participants</label>
+                    <label htmlFor="cf-participants" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Number of Participants</label>
                     <input id="cf-participants" data-testid="form-participants-input" type="number" min="1" value={form.participants} onChange={set("participants")} placeholder="e.g. 2" className={inputClass} />
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="cf-message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Message</label>
+                    <label htmlFor="cf-message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">Message</label>
                     <textarea id="cf-message" data-testid="form-message-input" rows="4" value={form.message} onChange={set("message")} placeholder="Anything we should know — experience level, questions, timings…" className={inputClass} />
                   </div>
                 </div>
                 <button
                   type="submit"
                   data-testid="form-submit-btn"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ocean px-8 py-4 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep sm:w-auto"
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-8 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[var(--accent-deep)] sm:w-auto"
                 >
                   <Send className="h-4 w-4" /> Send Enquiry via WhatsApp
                 </button>
-                <p className="mt-4 text-xs leading-relaxed text-charcoal/50">
+                <p className="mt-4 text-xs leading-relaxed text-muted">
                   This opens WhatsApp with your message prefilled — it is an enquiry, not a
                   confirmed booking. We will confirm availability personally.
                 </p>

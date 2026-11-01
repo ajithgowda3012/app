@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Lenis from "lenis";
+import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -58,7 +59,8 @@ function App() {
 
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
         <ScrollManager />
         <div className="flex min-h-screen flex-col">
           <Header />
@@ -76,7 +78,8 @@ function App() {
           <Footer />
           <FloatingWhatsApp />
         </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </ThemeProvider>
     </HelmetProvider>
   );
 }

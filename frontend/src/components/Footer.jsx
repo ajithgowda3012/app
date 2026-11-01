@@ -5,14 +5,14 @@ import { BUSINESS, NAV_LINKS, waLink, GENERAL_MESSAGE } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
 const Footer = () => (
-  <footer data-testid="site-footer" className="bg-ocean text-cream">
+  <footer data-testid="site-footer" className="bg-[var(--accent)] text-white">
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
       <div className="grid gap-12 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="inline-flex rounded-2xl bg-cream px-4 py-2">
+          <div className="inline-flex rounded-2xl bg-app px-4 py-2">
             <Logo className="h-14 w-auto" />
           </div>
-          <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/70">
+          <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/75">
             {BUSINESS.description}
           </p>
           <div className="mt-8 flex gap-3">
@@ -22,7 +22,7 @@ const Footer = () => (
               rel="noopener noreferrer"
               data-testid="footer-instagram-link"
               aria-label="SurfKarnataka on Instagram"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 transition-colors duration-300 hover:bg-cream hover:text-ocean"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors duration-300 hover:bg-app hover:text-strong"
             >
               <Instagram className="h-4.5 w-4.5" />
             </a>
@@ -33,7 +33,7 @@ const Footer = () => (
               data-testid="footer-whatsapp-link"
               aria-label="Chat with SurfKarnataka on WhatsApp"
               onClick={() => trackEvent("whatsapp_click", { source: "footer" })}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 transition-colors duration-300 hover:bg-cream hover:text-ocean"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors duration-300 hover:bg-app hover:text-strong"
             >
               <MessageCircle className="h-4.5 w-4.5" />
             </a>
@@ -42,7 +42,7 @@ const Footer = () => (
               data-testid="footer-phone-link"
               aria-label={`Call SurfKarnataka on ${BUSINESS.phoneDisplay}`}
               onClick={() => trackEvent("call_click", { source: "footer" })}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 transition-colors duration-300 hover:bg-cream hover:text-ocean"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors duration-300 hover:bg-app hover:text-strong"
             >
               <Phone className="h-4.5 w-4.5" />
             </a>
@@ -52,7 +52,7 @@ const Footer = () => (
               rel="noopener noreferrer"
               data-testid="footer-directions-link"
               aria-label="Get directions to SurfKarnataka"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 transition-colors duration-300 hover:bg-cream hover:text-ocean"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 transition-colors duration-300 hover:bg-app hover:text-strong"
             >
               <MapPin className="h-4.5 w-4.5" />
             </a>
@@ -60,7 +60,7 @@ const Footer = () => (
         </div>
 
         <div className="md:col-span-3">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sand">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--secondary)]">
             Explore
           </h3>
           <ul className="mt-6 space-y-3">
@@ -69,7 +69,7 @@ const Footer = () => (
                 <Link
                   to={l.to}
                   data-testid={`footer-nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-sm text-cream/70 transition-colors duration-300 hover:text-cream"
+                  className="text-sm text-white/75 transition-colors duration-300 hover:text-white"
                 >
                   {l.label}
                 </Link>
@@ -79,10 +79,10 @@ const Footer = () => (
         </div>
 
         <div className="md:col-span-4">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-sand">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--secondary)]">
             Find Us
           </h3>
-          <address className="mt-6 text-sm not-italic leading-relaxed text-cream/70">
+          <address className="mt-6 text-sm not-italic leading-relaxed text-white/75">
             {BUSINESS.legalName}
             <br />
             {BUSINESS.addressLines.map((line) => (
@@ -95,7 +95,7 @@ const Footer = () => (
           <a
             href={BUSINESS.phoneHref}
             data-testid="footer-phone-text"
-            className="mt-4 block text-sm text-cream/70 transition-colors duration-300 hover:text-cream"
+            className="mt-4 block text-sm text-white/75 transition-colors duration-300 hover:text-white"
           >
             {BUSINESS.phoneDisplay}
           </a>
@@ -104,14 +104,14 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             data-testid="footer-google-business-link"
-            className="mt-4 inline-flex items-center gap-1.5 text-sm text-sand transition-colors duration-300 hover:text-cream"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm text-[var(--secondary)] transition-colors duration-300 hover:text-white"
           >
             Find us on Google <ExternalLink className="h-3.5 w-3.5" />
           </a>
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col gap-3 border-t border-cream/15 pt-8 text-xs text-cream/50 md:flex-row md:items-center md:justify-between">
+      <div className="mt-16 flex flex-col gap-3 border-t border-white/15 pt-8 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
         <p data-testid="footer-copyright">
           © {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.
         </p>

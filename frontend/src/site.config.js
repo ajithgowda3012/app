@@ -196,9 +196,43 @@ export const GALLERY = [
 ];
 
 // ── Reviews ───────────────────────────────────────────────────────────────────
-// Paste genuine Google reviews here ({ name, text }) and they will appear
-// automatically. Empty → the site shows a "Find us on Google" button instead.
-export const REVIEWS = [];
+// Genuine Google reviews (transcribed from the Google Business profile).
+// Add more as { name, initial, time, text }.
+export const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/search/Surf+Karnataka+Gokarna";
+
+export const REVIEWS = [
+  {
+    name: "Nandhini Raj",
+    initial: "N",
+    time: "a month ago",
+    text: "Amazing experience learning how to surf. They help us catch the wave and also let us practice independently, providing feedback to improve. They ensure we are safe and sound in the water, allowing us to have fun in the best way possible. Can't recommend this place enough!",
+  },
+  {
+    name: "Suhas Vijay",
+    initial: "S",
+    time: "4 months ago",
+    text: "We had surf lessons with Akash over 3 days. I was amazed that with each day my confidence and enjoyment of the waves grew. Akash is an excellent instructor — very chilled, patient and so happy to see your progress. Highly recommend getting in touch if you are anywhere near Gokarna.",
+  },
+  {
+    name: "Bhargav VC",
+    initial: "B",
+    time: "8 months ago",
+    text: "First time I tried surfing. Though I was a little scared of the ocean, Akash's clear instructions in his unique style made me feel at ease, and I could surf over the waves very quickly. Much recommended!",
+  },
+  {
+    name: "Shalini Ananth",
+    initial: "S",
+    time: "a year ago",
+    text: "I had my first surfing lessons with Akash and Shashi — it was an absolutely surreal experience. They were very patient and encouraging throughout, even for someone like me who was scared to even enter the water. I can't recommend them enough!",
+  },
+  {
+    name: "Andrew Joseph",
+    initial: "A",
+    time: "a year ago",
+    text: "The perfect place to learn surfing for beginners, with the gentle sea at Gokarna Beach. Akash is a very good instructor, patiently answering all our doubts and guiding us through the entire session.",
+  },
+];
 
 // ── Instructors ───────────────────────────────────────────────────────────────
 // Add real instructor profiles here ({ name, bio, experience, photo, alt }).

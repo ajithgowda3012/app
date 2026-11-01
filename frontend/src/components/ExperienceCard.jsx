@@ -6,7 +6,7 @@ import { img } from "@/site.config";
 const ExperienceCard = ({ experience, tall = false }) => (
   <article
     data-testid={`experience-card-${experience.id}`}
-    className="group relative flex flex-col overflow-hidden rounded-2xl border border-sand/70 bg-white"
+    className="group relative flex flex-col overflow-hidden rounded-2xl border border-appborder bg-surface"
   >
     <div className={`relative overflow-hidden ${tall ? "aspect-[4/3] md:aspect-[16/11]" : "aspect-[4/3]"}`}>
       <img
@@ -17,17 +17,17 @@ const ExperienceCard = ({ experience, tall = false }) => (
       />
     </div>
     <div className="flex flex-1 flex-col p-6 md:p-8">
-      <h3 className="font-display text-2xl font-medium tracking-tight text-ocean md:text-3xl">
+      <h3 className="font-display text-2xl font-medium tracking-tight text-strong md:text-3xl">
         {experience.name}
       </h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/70 md:text-base">
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-body md:text-base">
         {experience.short}
       </p>
       <div className="mt-6 flex flex-wrap items-center gap-3">
         <Link
           to={`/lessons#${experience.id}`}
           data-testid={`learn-more-${experience.id}`}
-          className="inline-flex items-center gap-1.5 rounded-full border border-ocean px-5 py-2.5 text-sm font-semibold text-ocean transition-colors duration-300 hover:bg-ocean hover:text-cream"
+          className="inline-flex items-center gap-1.5 rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-strong transition-colors duration-300 hover:bg-[var(--accent)] hover:text-white"
         >
           Learn More <ArrowUpRight className="h-4 w-4" />
         </Link>
