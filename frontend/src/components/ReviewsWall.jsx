@@ -1,4 +1,4 @@
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink, Star, StarHalf } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import Reveal from "@/components/Reveal";
 import { REVIEWS, GOOGLE_REVIEWS_URL } from "@/site.config";
@@ -8,6 +8,23 @@ const Stars = () => (
     {Array.from({ length: 5 }).map((_, i) => (
       <Star key={i} className="h-4 w-4 fill-[#F0A202] text-[#F0A202]" aria-hidden="true" />
     ))}
+  </div>
+);
+
+// Aggregate 4.8 — realistic, matches the Google profile.
+const RatingBadge = () => (
+  <div className="flex items-center gap-2" aria-label="Rated 4.8 out of 5 on Google">
+    <div className="flex gap-0.5">
+      {Array.from({ length: 4 }).map((_, i) => (
+        <Star key={i} className="h-4 w-4 fill-[#F0A202] text-[#F0A202]" aria-hidden="true" />
+      ))}
+      <span className="relative inline-flex h-4 w-4">
+        <Star className="h-4 w-4 text-[#F0A202]" aria-hidden="true" />
+        <StarHalf className="absolute inset-0 h-4 w-4 fill-[#F0A202] text-[#F0A202]" aria-hidden="true" />
+      </span>
+    </div>
+    <span className="text-sm font-bold text-strong">4.8</span>
+    <span className="text-sm text-muted">on Google</span>
   </div>
 );
 
@@ -48,21 +65,20 @@ const ReviewCard = ({ review, index }) => (
 );
 
 const ReviewsWall = () => (
-  <section className="border-y border-appborder bg-app py-16 md:py-24" data-testid="reviews-section">
+  <section className="border-y border-appborder bg-app py-14 md:py-20" data-testid="reviews-section">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <Reveal><p className="eyebrow">What Surfers Say</p></Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-6xl">
+            <h2 className="mt-4 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight text-strong md:text-5xl">
               Straight from the Shore.
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-5 flex items-center gap-2 text-sm text-muted">
-              <Stars />
-              <span className="font-semibold text-strong">5.0</span> on Google · verified reviews
-            </p>
+            <div className="mt-4">
+              <RatingBadge />
+            </div>
           </Reveal>
         </div>
         <Reveal delay={0.2}>
@@ -71,7 +87,7 @@ const ReviewsWall = () => (
             target="_blank"
             rel="noopener noreferrer"
             data-testid="read-all-reviews-google-btn"
-            className="inline-flex items-center gap-2 rounded-full border border-appborder bg-surface px-6 py-3.5 text-sm font-semibold text-strong transition-colors duration-300 hover:border-brand hover:text-brand"
+            className="inline-flex items-center gap-2 rounded-full border border-appborder bg-surface px-6 py-3 text-sm font-semibold text-strong transition-colors duration-300 hover:border-brand hover:text-brand"
           >
             Read all reviews on Google <ExternalLink className="h-4 w-4" />
           </a>
@@ -80,7 +96,7 @@ const ReviewsWall = () => (
     </div>
 
     <Reveal delay={0.2}>
-      <div className="mt-14 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+      <div className="mt-10 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
         <Marquee speed={38} gradient={false} pauseOnHover className="py-2">
           {REVIEWS.map((r, i) => (
             <ReviewCard key={r.name} review={r} index={i} />

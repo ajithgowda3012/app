@@ -97,6 +97,21 @@ local surfer against a golden Gokarna headland.
   Removed standalone Location block and gallery grid; photo strip folded into Final CTA.
   Desktop scroll height reduced ~8000px → 6392px. Section padding tightened.
 
+## Homepage + Lessons restructure (2026-11-01)
+- Floating Instagram icon added next to WhatsApp (bottom-right) linking to profile/gallery.
+- Hero: eyebrow now "Surf Karnataka · Gokarna, Karnataka"; removed "Explore Surf Lessons"
+  CTA — single "Book Your Session"; hero height trimmed to 92svh.
+- Surfing Experiences rebuilt as a compact pill-list accordion (one expands at a time,
+  click to switch) — page height cut from ~6392px to ~4285px.
+- Moved learning journey ("How You'll Learn") onto Home after Experiences; removed the
+  "Why SurfKarnataka" and "Your Next Wave Is Waiting" sections.
+- Reviews: realistic 4.8★ aggregate badge (was 5.0), more compact section.
+- Lessons page: jump-to pills once at top (scroll to each lesson), removed the
+  duration/price/includes list, added "What to Carry / What We Provide" essentials
+  (realistic defaults in site.config.js TO_CARRY / WE_PROVIDE).
+- Theme: dark accent → dark red (#8B0000 family, #7c1010 page headers); light surfaces →
+  warm sand/gold; marquee is warm gold to match logo.
+
 ## Implemented (2026-11-01)
 - Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
   footer (on cream card), favicon.png, apple-touch-icon (assets in

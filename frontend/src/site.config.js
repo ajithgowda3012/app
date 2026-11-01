@@ -119,29 +119,6 @@ export const EXPERIENCES = [
 ];
 
 // ── Learning journey (illustrative) ──────────────────────────────────────────
-export const LEARNING_JOURNEY = [
-  {
-    title: "Introduction & basic surfing concepts",
-    text: "Meet your instructor, get comfortable, and understand what a session looks like from beach to wave.",
-  },
-  {
-    title: "Understanding the surfboard & the ocean",
-    text: "Learn the parts of the board, how waves form, and how to read the water before you enter it.",
-  },
-  {
-    title: "Paddling & positioning",
-    text: "Where to lie, how to paddle efficiently, and where to wait for the right wave.",
-  },
-  {
-    title: "The pop-up technique",
-    text: "Practise the jump from lying to standing on the sand until it becomes muscle memory.",
-  },
-  {
-    title: "Into the water — guided practice",
-    text: "Time to surf. Your instructor stays close while you catch real waves and put it all together.",
-  },
-];
-
 // ── Why SurfKarnataka ─────────────────────────────────────────────────────────
 export const HIGHLIGHTS = [
   {
@@ -239,6 +216,19 @@ export const REVIEWS = [
 // Add real instructor profiles here ({ name, bio, experience, photo, alt }).
 // No invented names or credentials — empty until the business supplies them.
 export const INSTRUCTORS = [];
+
+// ── Learning journey (illustrative) ──────────────────────────────────────────
+export const LEARNING_JOURNEY = [
+  { title: "Introduction & basic surfing concepts", text: "Meet your instructor, get comfortable, and understand what a session looks like from beach to wave." },
+  { title: "Understanding the surfboard & the ocean", text: "Learn the parts of the board, how waves form, and how to read the water before you enter it." },
+  { title: "Paddling & positioning", text: "Where to lie, how to paddle efficiently, and where to wait for the right wave." },
+  { title: "The pop-up technique", text: "Practise the jump from lying to standing on the sand until it becomes muscle memory." },
+  { title: "Into the water — guided practice", text: "Time to surf. Your instructor stays close while you catch real waves and put it all together." },
+];
+
+// ── What to carry / what we provide (realistic defaults — confirm with business) ──
+export const TO_CARRY = ["Swimwear & a towel", "Reef-safe sunscreen", "Drinking water", "A change of clothes"];
+export const WE_PROVIDE = ["Surfboard & leash", "Rash guard", "An instructor in the water with you"];
 
 export const NAV_LINKS = [
   { label: "Home", to: "/" },
