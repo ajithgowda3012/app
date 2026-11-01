@@ -41,10 +41,10 @@ export const bookingMessage = (experienceName) =>
 export const img = (base, w = 1600) => `${base}&w=${w}&auto=format&fit=crop`;
 
 export const IMAGES = {
-  hero: "https://images.unsplash.com/photo-1532484468512-fd9df0aa70f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
-  aboutInstructor: "https://images.unsplash.com/photo-1489633908075-1c914e8ee5ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBwb3J0cmFpdCUyMGJlYWNofGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
-  locationGokarna: "https://images.unsplash.com/photo-1771945484043-3a17fbf57a4b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-  introSide: "https://images.unsplash.com/photo-1590767433546-94047b163cd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
+  hero: "https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
+  aboutInstructor: "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+  locationGokarna: "https://images.unsplash.com/photo-1780552564315-7b63e8c01fda?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+  introSide: "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
 };
 
 // ── Surfing experiences (editable offerings) ─────────────────────────────────
@@ -58,8 +58,8 @@ export const EXPERIENCES = [
     description:
       "Never touched a surfboard? This is where it starts. We begin on the sand with the basics, then move into gentle, forgiving waves where your instructor stays right beside you until you're standing and riding on your own.",
     image:
-      "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-    alt: "Beginner surfer practising on a soft board in gentle Gokarna waves",
+      "https://images.unsplash.com/photo-1505937059382-aab581fd88c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+    alt: "Beginner surfer riding gentle whitewash in warm Gokarna water",
     level: "No experience needed",
     duration: null,
     price: null,
@@ -74,8 +74,8 @@ export const EXPERIENCES = [
     description:
       "For surfers who already pop up with confidence and want more: paddling out back, positioning, wave selection, turning and building real control on the face of the wave.",
     image:
-      "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-    alt: "Intermediate surfer riding along the face of a clean wave",
+      "https://images.unsplash.com/photo-1523606772308-64a28db0ef2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
+    alt: "Intermediate surfer carving on an open wave face in boardshorts",
     level: "Comfortable standing on green or white waves",
     duration: null,
     price: null,
@@ -90,8 +90,8 @@ export const EXPERIENCES = [
     description:
       "A private session gives you the instructor's full attention: your pace, your goals, your waves. Ideal if you want to progress quickly, prefer learning alone, or have something specific to work on.",
     image:
-      "https://images.unsplash.com/photo-1502933691298-84fc14542831?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-    alt: "One-to-one surf coaching session in the ocean",
+      "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+    alt: "Instructor and student walking into the water for a private surf session",
     level: "All levels",
     duration: null,
     price: null,
@@ -106,8 +106,8 @@ export const EXPERIENCES = [
     description:
       "Bring your people. Group sessions keep the energy high and the memories shared, with instruction for everyone in the water. Great for friends, couples, families and solo travellers who want company.",
     image:
-      "https://images.unsplash.com/photo-1745594151310-d771b97211cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
-    alt: "Group of surfers heading to the ocean with their boards",
+      "https://images.unsplash.com/photo-1458592918806-99f9cfbe41fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxncm91cCUyMHN1cmZlcnMlMjBiZWFjaHxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+    alt: "Group of friends carrying surfboards along the beach at golden hour",
     level: "All levels",
     duration: null,
     price: null,
@@ -173,26 +173,26 @@ export const GALLERY_CATEGORIES = [
 ];
 
 export const GALLERY = [
-  { src: "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Surfer riding powerfully down the face of an ocean wave", category: "Surfing", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1498330177096-689e3fb901ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Large blue wave breaking near the shore", category: "Surfing", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1527731149372-fae504a1185f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Surfers paddling out into deep green ocean waves", category: "Surfing", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1590767433546-94047b163cd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85", alt: "Surf instructor giving a lesson on the beach", category: "Surf Lessons", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1730761970652-2e45c1ab3fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85", alt: "Instructor helping a student balance on a surfboard in the water", category: "Surf Lessons", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1730799305374-03769d19590e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85", alt: "Instructor and student reviewing surf technique on the shore", category: "Surf Lessons", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85", alt: "Student standing up on a surfboard for the first time", category: "Students", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85", alt: "Student catching a wave in golden hour light", category: "Students", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85", alt: "Beginner student practising the pop-up on a soft-top board", category: "Students", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Surf instructor holding a board in a tropical setting", category: "Instructors", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Instructor walking toward the ocean carrying a surfboard", category: "Instructors", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Surf coach smiling on the beach", category: "Instructors", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1468413253725-0d5181091126?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Lush tropical coastline meeting the blue ocean", category: "Beach & Ocean", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1509233725247-49e657c54213?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "Palm trees framing a quiet tropical beach", category: "Beach & Ocean", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1544945582-052b29cd29e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85", alt: "White sand shoreline under clear skies", category: "Beach & Ocean", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85", alt: "Bird's-eye view of waves rolling onto the beach", category: "Beach & Ocean", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1551304885-7d8cc4ac849e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85", alt: "Surfboard resting on the sand at sunset", category: "Surf Lifestyle", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1589819798346-1ab9a611a315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85", alt: "Surfer walking along the beach with a board", category: "Surf Lifestyle", ratio: "portrait" },
-  { src: "https://images.unsplash.com/photo-1669574273770-4bf874c5896d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85", alt: "Surfer carrying a board along the shoreline at sunset", category: "Surf Lifestyle", ratio: "landscape" },
-  { src: "https://images.unsplash.com/photo-1551304885-277107370841?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85", alt: "Classic white surfboard resting on warm sand", category: "Surf Lifestyle", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1530870110042-98b2cb110834?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85", alt: "Surfer riding a warm, sunny barrel wave", category: "Surfing", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1638911886915-a3f2aca0975d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85", alt: "Stylish turn on an open ocean wave", category: "Surfing", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1609869846227-9eeb3a869f8c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85", alt: "Surfer in action on a tropical wave", category: "Surfing", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85", alt: "Surf lesson setup on a sunny beach", category: "Surf Lessons", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1526342256246-b67e94be5c79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxzdXJmJTIwY29hY2hpbmclMjB3YXJtfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85", alt: "Instructor teaching a student in the water", category: "Surf Lessons", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85", alt: "Instructor pushing a student into a gentle beginner wave", category: "Surf Lessons", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85", alt: "Student successfully popping up on a learner board", category: "Students", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85", alt: "Student paddling out through clear water", category: "Students", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85", alt: "Student walking up the sunny beach after a lesson", category: "Students", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Surf instructor holding a board in warm light", category: "Instructors", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Instructor heading to the surf with a board", category: "Instructors", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Candid portrait of a surf coach in the sun", category: "Instructors", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1594057121927-df7ee084e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85", alt: "Lush palms lining the tropical coast", category: "Beach & Ocean", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1780552363150-804bba12d272?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85", alt: "Aerial of a turquoise hidden cove on the coast", category: "Beach & Ocean", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1533090215800-bdf63af68c8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85", alt: "Palm-fringed shoreline in golden light", category: "Beach & Ocean", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1664133178758-6df14ac28392?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85", alt: "Moody palm trees over the coastline", category: "Beach & Ocean", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Surfboard resting on warm sand at golden hour", category: "Surf Lifestyle", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1583790803390-56c0b919f7d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Surfboard detail glowing at golden hour", category: "Surf Lifestyle", ratio: "portrait" },
+  { src: "https://images.unsplash.com/photo-1636353990836-b20b196dd41e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Silhouetted surfer walking along the beach at sunset", category: "Surf Lifestyle", ratio: "landscape" },
+  { src: "https://images.unsplash.com/photo-1514896818-d778f2fac2e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85", alt: "Wide sunset view over the waves from the beach", category: "Surf Lifestyle", ratio: "portrait" },
 ];
 
 // ── Reviews ───────────────────────────────────────────────────────────────────

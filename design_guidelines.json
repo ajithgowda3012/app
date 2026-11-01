@@ -63,120 +63,149 @@
   "media": {
     "image_urls": {
       "hero_background": {
-        "url": "https://images.unsplash.com/photo-1532484468512-fd9df0aa70f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
-        "description": "Cinematic surfer riding a wave at golden hour"
+        "url": "https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Cinematic golden hour surfer silhouette",
+        "note": "Replaced with a rich golden silhouette that provides perfect contrast for white text."
       },
       "experiences_beginner": {
-        "url": "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Beginner surf lesson"
+        "url": "https://images.unsplash.com/photo-1505937059382-aab581fd88c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Beginner riding gentle whitewash",
+        "note": "Swapped to a clear, sunny moment of a beginner riding gentle whitewash."
       },
       "experiences_intermediate": {
-        "url": "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Intermediate surfing"
+        "url": "https://images.unsplash.com/photo-1523606772308-64a28db0ef2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Intermediate surfer carving on open face",
+        "note": "Upgraded to a dynamic boardshorts action shot showing intermediate open-face trimming."
       },
       "experiences_private": {
-        "url": "https://images.unsplash.com/photo-1502933691298-84fc14542831?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Private surf coaching"
+        "url": "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor and student walking into water",
+        "note": "Changed to an authentic one-on-one instructor and student moment heading into the water."
       },
       "experiences_group": {
-        "url": "https://images.unsplash.com/photo-1745594151310-d771b97211cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Group session headed to ocean"
+        "url": "https://images.unsplash.com/photo-1458592918806-99f9cfbe41fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxncm91cCUyMHN1cmZlcnMlMjBiZWFjaHxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Group of friends carrying boards on the beach",
+        "note": "Replaced with a warm, backlit group of friends walking together with boards."
       },
       "about_instructor": {
-        "url": "https://images.unsplash.com/photo-1489633908075-1c914e8ee5ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBwb3J0cmFpdCUyMGJlYWNofGVufDB8fHx8MTc5MzQ4ODMxNnww&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor portrait walking with yellow board"
+        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Warm instructor portrait",
+        "note": "Changed to an engaging, natural instructor portrait in warm light."
       },
       "location_gokarna": {
-        "url": "https://images.unsplash.com/photo-1771945484043-3a17fbf57a4b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Tropical beach aerial, Gokarna coastal vibe"
+        "url": "https://images.unsplash.com/photo-1780552564315-7b63e8c01fda?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Tropical coastline aerial",
+        "note": "Swapped to an aerial that captures the lush, headland-rich geography of Gokarna."
       },
       "gallery_action": {
-        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Advanced surfing action focus"
-      },
-      "gallery_lifestyle_1": {
-        "url": "https://images.unsplash.com/photo-1551304885-7d8cc4ac849e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfboard on sand at sunset"
-      },
-      "gallery_lifestyle_2": {
-        "url": "https://images.unsplash.com/photo-1589819798346-1ab9a611a315?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzdXJmYm9hcmQlMjBzYW5kJTIwYmVhY2h8ZW58MHx8fHwxNzkzNDg4MzE2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfer girl walking on beach"
-      },
-      "gallery_aerial": {
-        "url": "https://images.unsplash.com/photo-1555979864-7a8f9b4fddf8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwY29hc3RhbHxlbnwwfHx8fDE3OTM0ODgzMTZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Beach bird's eye view"
+        "url": "https://images.unsplash.com/photo-1455264745730-cb3b76250ae8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Advanced surfer carving in boardshorts",
+        "note": "Added a high-performance open-face carving shot in boardshorts."
       },
       "gallery_surfing_1": {
-        "url": "https://images.unsplash.com/photo-1527731149372-fae504a1185f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Surfers paddling out into deep green ocean waves"
+        "url": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Warm water wave riding",
+        "note": "Swapped a cold-water photo for a warm, sunny barrel ride."
       },
       "gallery_surfing_2": {
-        "url": "https://images.unsplash.com/photo-1498330177096-689e3fb901ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Large blue barrel wave crashing near the shore"
+        "url": "https://images.unsplash.com/photo-1638911886915-a3f2aca0975d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Stylish turn on a wave",
+        "note": "Updated to a stylish warm-water turn."
       },
       "gallery_surfing_3": {
-        "url": "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Surfer riding powerfully down the face of an ocean wave"
+        "url": "https://images.unsplash.com/photo-1609869846227-9eeb3a869f8c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Active tropical surfing",
+        "note": "Replaced generic wave with an active, tropical surfing moment."
       },
       "gallery_lessons_1": {
-        "url": "https://images.unsplash.com/photo-1590767433546-94047b163cd9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
-        "description": "Female surf instructor giving a lesson on the beach"
+        "url": "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Lesson setup on the beach",
+        "note": "Swapped to a bright, clear beach lesson setup."
       },
       "gallery_lessons_2": {
-        "url": "https://images.unsplash.com/photo-1730761970652-2e45c1ab3fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor helping a student balance on a surfboard in the water"
+        "url": "https://images.unsplash.com/photo-1526342256246-b67e94be5c79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxzdXJmJTIwY29hY2hpbmclMjB3YXJtfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "In-water surf instruction",
+        "note": "Changed to an in-water teaching moment."
       },
       "gallery_lessons_3": {
-        "url": "https://images.unsplash.com/photo-1730799305374-03769d19590e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHRlYWNoaW5nfGVufDB8fHx8MTc5MzQ4OTQ1Nnww&ixlib=rb-4.1.0&q=85",
-        "description": "Two people reviewing surf technique on the shore"
+        "url": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor assisting student on wave",
+        "note": "Updated with a supportive push into a beginner wave."
       },
       "gallery_students_1": {
-        "url": "https://images.unsplash.com/photo-1597382048067-7923725a1524?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Student successfully standing up on a red surfboard"
+        "url": "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Student successfully popping up",
+        "note": "Replaced with a successful pop-up on a learner board."
       },
       "gallery_students_2": {
-        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Student catching a wave in golden hour light"
+        "url": "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Student paddling in clear water",
+        "note": "Added a joyful student paddling out in clear water."
       },
       "gallery_students_3": {
-        "url": "https://images.unsplash.com/photo-1607429289259-456053385f53?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxsZWFybmluZyUyMHRvJTIwc3VyZnxlbnwwfHx8fDE3OTM0ODk0NTV8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Beginner student popping up on a soft-top board"
+        "url": "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Student walking on beach post-lesson",
+        "note": "Swapped for a sunny post-lesson walk up the beach."
       },
       "gallery_instructors_1": {
-        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Portrait of a surf instructor holding a surfboard in tropical setting"
+        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Editorial style instructor portrait",
+        "note": "Upgraded to a warm, editorial-style instructor portrait."
       },
       "gallery_instructors_2": {
-        "url": "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor walking confidently toward the ocean carrying a surfboard"
+        "url": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Candid authentic coach portrait",
+        "note": "Swapped to a candid, authentic portrait under the sun."
       },
       "gallery_instructors_3": {
-        "url": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Friendly portrait of a male surf coach smiling at the beach"
+        "url": "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Instructor heading to the surf",
+        "note": "Replaced with a lifestyle portrait of an instructor heading to the surf."
       },
       "gallery_beach_ocean_1": {
-        "url": "https://images.unsplash.com/photo-1468413253725-0d5181091126?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Lush tropical coastline meeting the blue ocean"
+        "url": "https://images.unsplash.com/photo-1594057121927-df7ee084e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Lush palms along the coast",
+        "note": "Replaced generic beach with lush palms matching Gokarna's coastline."
       },
       "gallery_beach_ocean_2": {
-        "url": "https://images.unsplash.com/photo-1509233725247-49e657c54213?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Coconut palm trees framing a pristine tropical beach"
+        "url": "https://images.unsplash.com/photo-1780552363150-804bba12d272?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Turquoise hidden cove aerial",
+        "note": "Added a turquoise aerial reminiscent of Karnataka's hidden coves."
       },
       "gallery_beach_ocean_3": {
-        "url": "https://images.unsplash.com/photo-1544945582-052b29cd29e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMGJlYWNofGVufDB8fHx8MTc5MzQ4OTQ1NXww&ixlib=rb-4.1.0&q=85",
-        "description": "Stunning white sand shoreline under clear sunny skies"
+        "url": "https://images.unsplash.com/photo-1533090215800-bdf63af68c8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Palm-fringed shoreline in golden light",
+        "note": "Swapped for a palm-fringed shoreline with golden light."
+      },
+      "gallery_lifestyle_1": {
+        "url": "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Editorial surfboard on warm sand",
+        "note": "Updated to an editorial shot of a surfboard resting on warm sand."
+      },
+      "gallery_lifestyle_2": {
+        "url": "https://images.unsplash.com/photo-1583790803390-56c0b919f7d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Aesthetic board detail at golden hour",
+        "note": "Swapped for an aesthetic board detail at golden hour."
       },
       "gallery_lifestyle_3": {
-        "url": "https://images.unsplash.com/photo-1606816090771-b389a53fd4db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfer far in the distance with gentle waves crashing on the empty shore"
+        "url": "https://images.unsplash.com/photo-1636353990836-b20b196dd41e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Silhouetted surfer walk at sunset",
+        "note": "Replaced with a silhouetted surfer walk reflecting a serene coastal vibe."
       },
       "gallery_lifestyle_4": {
-        "url": "https://images.unsplash.com/photo-1669574273770-4bf874c5896d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Surfer walking along the shoreline carrying a board at sunset"
+        "url": "https://images.unsplash.com/photo-1664133178758-6df14ac28392?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Moody palm tree detail",
+        "note": "Added a moody palm tree detail reflecting the coastal lifestyle."
       },
       "gallery_lifestyle_5": {
-        "url": "https://images.unsplash.com/photo-1551304885-277107370841?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBvbiUyMHNhbmQlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzkzNDg5NDU1fDA&ixlib=rb-4.1.0&q=85",
-        "description": "A classic white surfboard resting peacefully on the warm sand"
+        "url": "https://images.unsplash.com/photo-1514896818-d778f2fac2e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Atmospheric wide lifestyle shot facing sunset",
+        "note": "Updated to an atmospheric, wide lifestyle shot facing the sunset."
+      },
+      "intro_side": {
+        "url": "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Surf lesson on the beach, warm light, vertical-friendly",
+        "note": "Added a beautiful, vertically-composed warm lesson shot for the intro section."
       }
     }
   },
@@ -194,7 +223,7 @@
     "Do not apply universal transition (`transition: all`). Add transitions for specific interactive elements only.",
     "Do not center align the app container. No `.App { text-align: center; }`.",
     "Use 2-3x more spacing (e.g. `py-24`, `p-12`) than feels comfortable.",
-    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use `lucide-react`.",
+    "NEVER use AI assistant Emoji characters like \ud83e\udd16\ud83e\udde0\ud83d\udcad\ud83d\udca1\ud83d\udd2e\ud83c\udfaf etc for icons. Use `lucide-react`.",
     "NEVER use placeholder URLs. Use the exact image_urls provided in this JSON.",
     "All interactive elements MUST include a `data-testid` attribute (e.g., `data-testid=\"book-now-btn\"`).",
     "Header must not have a fully transparent background. Use glassmorphism (`backdrop-blur-xl bg-[#F7F5F0]/70`) so navigation links are readable over images.",

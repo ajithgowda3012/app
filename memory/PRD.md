@@ -54,6 +54,15 @@ business facts.
 - Gallery filters, lightbox open/next/close; mobile menu navigation
 - robots.txt and llms.txt served as real files; unique titles per page; one H1 per page
 
+## Implemented (2026-11-01)
+- Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
+  footer (on cream card), favicon.png, apple-touch-icon (assets in
+  frontend/public/assets/, Logo.jsx component)
+- Full photo re-curation by design agent: entire image set (hero, 4 experiences,
+  20 gallery photos, about, location, intro) replaced with warm golden-hour,
+  warm-water editorial photography matching Gokarna's coast; all 29 URLs verified
+  serving real images; zero broken images on rendered pages
+
 ## Pending (needs owner / production)
 - Canonical URL, og:url, og:image, sitemap.xml — require the confirmed production domain
 - Genuine Google reviews to paste into REVIEWS (site shows "Find us on Google" until then)
