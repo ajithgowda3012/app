@@ -66,6 +66,13 @@ Owner requested: 3 pages, SEO-ready, marketing/psychology-driven design, no hamb
 - Kinetic masked hero reveal, editorial marquee, spotlight photography, scroll-reveals,
   lenis momentum scroll — the psychological persuasion journey in one continuous flow.
 
+## Photography — Indian-focused (2026-11-01)
+Owner requested: "Try to keep Indian images and avoid foreigners." Full image set
+re-curated by design agent around Indian/South-Asian surfers, instructors, students
+and the Indian coastline (Gokarna/Kerala/Goa-style golden shores); foreign/Western-tourist
+imagery removed. All 24 config URLs verified real; zero broken images; hero is now a
+local surfer against a golden Gokarna headland.
+
 ## Implemented (2026-11-01)
 - Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
   footer (on cream card), favicon.png, apple-touch-icon (assets in

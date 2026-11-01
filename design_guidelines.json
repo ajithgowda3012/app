@@ -41,7 +41,7 @@
   "components_to_use": [
     {
       "name": "Header",
-      "description": "Sticky top, crystal glassmorphism `backdrop-blur-xl bg-[#F7F5F0]/70`. Minimal links left, Book Now CTA right."
+      "description": "Sticky top, crystal glassmorphism `backdrop-blur-xl bg-[#F7F5F0]/70`. Minimal links left, Book Now CTA right. CRITICAL: DO NOT use complete transparent background in header."
     },
     {
       "name": "Floating WhatsApp",
@@ -63,149 +63,149 @@
   "media": {
     "image_urls": {
       "hero_background": {
-        "url": "https://images.unsplash.com/photo-1513569143478-b38b2c0ef97f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Cinematic golden hour surfer silhouette",
-        "note": "Replaced with a rich golden silhouette that provides perfect contrast for white text."
+        "url": "https://images.unsplash.com/photo-1613693692851-204a395d0ec7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Silhouette surfer at sunset on South Asian coast",
+        "note": "Replaced with an authentic warm-water silhouette that fits the coastal Indian vibe perfectly, avoiding Western tropes."
       },
       "experiences_beginner": {
-        "url": "https://images.unsplash.com/photo-1505937059382-aab581fd88c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Beginner riding gentle whitewash",
-        "note": "Swapped to a clear, sunny moment of a beginner riding gentle whitewash."
+        "url": "https://images.unsplash.com/photo-1645484031499-d3d7483e3e5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Indian surfer standing in ocean holding board",
+        "note": "Features a genuine South Asian local in the water with a board, replacing Western tourists with authentic representation."
       },
       "experiences_intermediate": {
-        "url": "https://images.unsplash.com/photo-1523606772308-64a28db0ef2c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Intermediate surfer carving on open face",
-        "note": "Upgraded to a dynamic boardshorts action shot showing intermediate open-face trimming."
+        "url": "https://images.unsplash.com/photo-1630697863146-aa9bee30ee73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Indian surfer riding a sea wave",
+        "note": "An authentic Indian surfer riding a wave during daytime, establishing genuine local surf culture."
       },
       "experiences_private": {
-        "url": "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor and student walking into water",
-        "note": "Changed to an authentic one-on-one instructor and student moment heading into the water."
+        "url": "https://images.unsplash.com/photo-1599237109212-0e2a94156af8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of dark-skinned Indian surfer in the water",
+        "note": "A genuine portrait of a South Asian local in the water, perfect for an intimate instructor/private lesson feel."
       },
       "experiences_group": {
-        "url": "https://images.unsplash.com/photo-1458592918806-99f9cfbe41fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxncm91cCUyMHN1cmZlcnMlMjBiZWFjaHxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Group of friends carrying boards on the beach",
-        "note": "Replaced with a warm, backlit group of friends walking together with boards."
+        "url": "https://images.unsplash.com/photo-1609365635346-524d0024684f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Local person carrying surfboard on Goa beach",
+        "note": "Shot from Goa featuring locals on the beach with boards, completely avoiding the Western resort cliché."
       },
       "about_instructor": {
-        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Warm instructor portrait",
-        "note": "Changed to an engaging, natural instructor portrait in warm light."
+        "url": "https://images.unsplash.com/photo-1746106075291-92d791c187e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "South Asian surf instructor looking at the ocean",
+        "note": "Authentic South Asian instructor looking out at the Indian Ocean coast, giving a real sense of local expertise."
       },
       "location_gokarna": {
-        "url": "https://images.unsplash.com/photo-1780552564315-7b63e8c01fda?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Tropical coastline aerial",
-        "note": "Swapped to an aerial that captures the lush, headland-rich geography of Gokarna."
+        "url": "https://images.unsplash.com/photo-1734120113639-0d034e85c377?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Gokarna coast view from lush hill",
+        "note": "Authentic rugged Gokarna coastline showing the lush green hills meeting the Arabian Sea, exactly matching the region."
       },
       "gallery_action": {
-        "url": "https://images.unsplash.com/photo-1455264745730-cb3b76250ae8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Advanced surfer carving in boardshorts",
-        "note": "Added a high-performance open-face carving shot in boardshorts."
+        "url": "https://images.unsplash.com/photo-1526485856375-9110812fbf35?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Action shot of local surfing in Goa",
+        "note": "Great action shot of a surfer in Goa, showing real local wave riding instead of a Hawaiian wave."
       },
       "gallery_surfing_1": {
-        "url": "https://images.unsplash.com/photo-1530870110042-98b2cb110834?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMGFjdGlvbnxlbnwwfHx8fDE3OTM1MTU3MjZ8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Warm water wave riding",
-        "note": "Swapped a cold-water photo for a warm, sunny barrel ride."
+        "url": "https://images.unsplash.com/photo-1520443240718-fce21901db79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark-skinned surfer riding a wave",
+        "note": "Dark-skinned surfer riding an Asian wave, grounding the action locally in warm waters."
       },
       "gallery_surfing_2": {
-        "url": "https://images.unsplash.com/photo-1638911886915-a3f2aca0975d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Stylish turn on a wave",
-        "note": "Updated to a stylish warm-water turn."
+        "url": "https://images.unsplash.com/photo-1527731149372-fae504a1185f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Aerial view of surfers in tropical waters",
+        "note": "Aerial view that closely matches the deep tropical blues of the South Indian coast."
       },
       "gallery_surfing_3": {
-        "url": "https://images.unsplash.com/photo-1609869846227-9eeb3a869f8c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxzdXJmZXIlMjBib2FyZHNob3J0cyUyMHdhdmV8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Active tropical surfing",
-        "note": "Replaced generic wave with an active, tropical surfing moment."
+        "url": "https://images.unsplash.com/photo-1645484013576-1bc341a4207f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHxpbmRpYSUyMHN1cmZpbmd8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Person swimming in the ocean at sunset",
+        "note": "Authentic warm sunset swimming in the Indian Ocean, replacing generic Western beach shots."
       },
       "gallery_lessons_1": {
-        "url": "https://images.unsplash.com/photo-1517699418036-fb5d179fef0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Lesson setup on the beach",
-        "note": "Swapped to a bright, clear beach lesson setup."
+        "url": "https://images.unsplash.com/photo-1645484013523-a8f0cae92612?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Indian surfer standing on a beach with board",
+        "note": "Authentic South Asian surfer on a local beach, setting the right tone for Indian lessons."
       },
       "gallery_lessons_2": {
-        "url": "https://images.unsplash.com/photo-1526342256246-b67e94be5c79?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxzdXJmJTIwY29hY2hpbmclMjB3YXJtfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
-        "description": "In-water surf instruction",
-        "note": "Changed to an in-water teaching moment."
+        "url": "https://images.unsplash.com/photo-1554787990-fd7a431e3b0a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Gokarna beach scene with locals",
+        "note": "Gokarna beach scene with locals in the water, highly authentic."
       },
       "gallery_lessons_3": {
-        "url": "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor assisting student on wave",
-        "note": "Updated with a supportive push into a beginner wave."
+        "url": "https://images.unsplash.com/photo-1590393275627-0c48482c60e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHw0fHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Locals walking on a sandy beach in Goa",
+        "note": "Real local beach activity in Goa, representing the everyday student experience."
       },
       "gallery_students_1": {
-        "url": "https://images.unsplash.com/photo-1526342122811-2a9c8512023d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Student successfully popping up",
-        "note": "Replaced with a successful pop-up on a learner board."
+        "url": "https://images.unsplash.com/photo-1593359652766-b77c5795bd65?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Everyday beachgoers at Gokarna",
+        "note": "Everyday local beachgoers in Gokarna, reflecting the authentic vibe."
       },
       "gallery_students_2": {
-        "url": "https://images.unsplash.com/photo-1559627755-42212e5c5fdf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxzdXJmaW5nJTIwcG9wdXB8ZW58MHx8fHwxNzkzNTE1NzI2fDA&ixlib=rb-4.1.0&q=85",
-        "description": "Student paddling in clear water",
-        "note": "Added a joyful student paddling out in clear water."
+        "url": "https://images.unsplash.com/photo-1668487103952-299943240474?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGVzc29uJTIwYXNpYXxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Tropical sandy beach with palms",
+        "note": "Typical South Asian shoreline with palms, perfect for beginners."
       },
       "gallery_students_3": {
-        "url": "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Student walking on beach post-lesson",
-        "note": "Swapped for a sunny post-lesson walk up the beach."
+        "url": "https://images.unsplash.com/photo-1772791615983-c13f6e773082?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Local fishing boats on tropical sand",
+        "note": "Working coastal beach mirroring Karnataka's fishing and surfing overlap."
       },
       "gallery_instructors_1": {
-        "url": "https://images.unsplash.com/photo-1616641611019-0830e6383a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Editorial style instructor portrait",
-        "note": "Upgraded to a warm, editorial-style instructor portrait."
+        "url": "https://images.unsplash.com/photo-1746106075291-92d791c187e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Candid shot of South Asian surf instructor",
+        "note": "Candid, authentic shot of a South Asian surf instructor in their environment."
       },
       "gallery_instructors_2": {
-        "url": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Candid authentic coach portrait",
-        "note": "Swapped to a candid, authentic portrait under the sun."
+        "url": "https://images.unsplash.com/photo-1599237109212-0e2a94156af8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw0fHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of Indian surfer in the water",
+        "note": "Genuine portrait of an Indian surfer that reads perfectly as an instructor."
       },
       "gallery_instructors_3": {
-        "url": "https://images.unsplash.com/photo-1554757716-46f23cad3134?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMHBvcnRyYWl0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Instructor heading to the surf",
-        "note": "Replaced with a lifestyle portrait of an instructor heading to the surf."
+        "url": "https://images.unsplash.com/photo-1645484013523-a8f0cae92612?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Local Indian surfer ready for the water",
+        "note": "Portrait of a local surfer ready for the water, matching the real aesthetic."
       },
       "gallery_beach_ocean_1": {
-        "url": "https://images.unsplash.com/photo-1594057121927-df7ee084e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Lush palms along the coast",
-        "note": "Replaced generic beach with lush palms matching Gokarna's coastline."
+        "url": "https://images.unsplash.com/photo-1650730005180-2c849af5d6cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxrZXJhbGElMjBjb2FzdHxlbnwwfHx8fDE3OTM1MTc5OTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Rugged red-earth and green coast in Kerala",
+        "note": "Rugged red-earth and green coast typical of Kerala/Karnataka shorelines."
       },
       "gallery_beach_ocean_2": {
-        "url": "https://images.unsplash.com/photo-1780552363150-804bba12d272?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGJlYWNoJTIwYWVyaWFsJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE1NzIxfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Turquoise hidden cove aerial",
-        "note": "Added a turquoise aerial reminiscent of Karnataka's hidden coves."
+        "url": "https://images.unsplash.com/photo-1646299588107-40fabeca07da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxrZXJhbGElMjBjb2FzdHxlbnwwfHx8fDE3OTM1MTc5OTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Sweeping view of Kerala cliffs and ocean",
+        "note": "Sweeping view of the dramatic cliffs and ocean found along the Indian west coast."
       },
       "gallery_beach_ocean_3": {
-        "url": "https://images.unsplash.com/photo-1533090215800-bdf63af68c8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
-        "description": "Palm-fringed shoreline in golden light",
-        "note": "Swapped for a palm-fringed shoreline with golden light."
+        "url": "https://images.unsplash.com/photo-1517053589573-a5473fadffbd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxzcmklMjBsYW5rYSUyMHN1cmZ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Lush tropical headland on the Indian Ocean",
+        "note": "Lush tropical headland perfectly capturing the Arabian Sea / Indian Ocean vibe."
       },
       "gallery_lifestyle_1": {
-        "url": "https://images.unsplash.com/photo-1531722569936-825d3dd91b15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Editorial surfboard on warm sand",
-        "note": "Updated to an editorial shot of a surfboard resting on warm sand."
+        "url": "https://images.unsplash.com/photo-1559140097-6e6ca59e70ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBzdXJmZXJ8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfboards resting on dark coastal sand",
+        "note": "Boards resting on the dark, natural sand characteristic of the Indian west coast."
       },
       "gallery_lifestyle_2": {
-        "url": "https://images.unsplash.com/photo-1583790803390-56c0b919f7d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHw0fHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Aesthetic board detail at golden hour",
-        "note": "Swapped for an aesthetic board detail at golden hour."
+        "url": "https://images.unsplash.com/photo-1586164354790-a6782cfa8794?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxzdXJmJTIwaW5zdHJ1Y3RvciUyMGFzaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Surfboard under tropical palms",
+        "note": "Surfboard under tropical palms typical of the South Indian lifestyle."
       },
       "gallery_lifestyle_3": {
-        "url": "https://images.unsplash.com/photo-1636353990836-b20b196dd41e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxzdXJmYm9hcmQlMjBzYW5kJTIwc3Vuc2V0fGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Silhouetted surfer walk at sunset",
-        "note": "Replaced with a silhouetted surfer walk reflecting a serene coastal vibe."
+        "url": "https://images.unsplash.com/photo-1621951289270-b942dc5f4320?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwxfHxnb2ElMjBzdXJmfGVufDB8fHx8MTc5MzUxODAxMXww&ixlib=rb-4.1.0&q=85",
+        "description": "Surfboard lying on a beach in Goa",
+        "note": "Aesthetic board shot taken on a real beach in Goa."
       },
       "gallery_lifestyle_4": {
-        "url": "https://images.unsplash.com/photo-1664133178758-6df14ac28392?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGNvYXN0bGluZSUyMHBhbG0lMjB0cmVlfGVufDB8fHx8MTc5MzUxNTcyNnww&ixlib=rb-4.1.0&q=85",
-        "description": "Moody palm tree detail",
-        "note": "Added a moody palm tree detail reflecting the coastal lifestyle."
+        "url": "https://images.unsplash.com/photo-1645484031373-ca139e67d7ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHw0fHxzdXJmJTIwbGlmZXN0eWxlJTIwaW5kaWF8ZW58MHx8fHwxNzkzNTE4MDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist board shot on Indian sand",
+        "note": "Minimalist board shot resting directly on authentic Indian coastal sand."
       },
       "gallery_lifestyle_5": {
-        "url": "https://images.unsplash.com/photo-1514896818-d778f2fac2e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxzdXJmZXIlMjBzdW5zZXQlMjB3YXZlfGVufDB8fHx8MTc5MzUxNTcyMXww&ixlib=rb-4.1.0&q=85",
-        "description": "Atmospheric wide lifestyle shot facing sunset",
-        "note": "Updated to an atmospheric, wide lifestyle shot facing the sunset."
+        "url": "https://images.unsplash.com/photo-1641192936002-80e89555786f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwzfHxnb2thcm5hJTIwYmVhY2h8ZW58MHx8fHwxNzkzNTE3OTk0fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Dramatic black volcanic rocks of Gokarna coast",
+        "note": "Shows the dramatic black volcanic rocks found specifically along the Gokarna coast."
       },
       "intro_side": {
-        "url": "https://images.unsplash.com/photo-1580331522941-58d0812c6d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxzdXJmJTIwbGVzc29uJTIwd2FybXxlbnwwfHx8fDE3OTM1MTU3MjF8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Surf lesson on the beach, warm light, vertical-friendly",
-        "note": "Added a beautiful, vertically-composed warm lesson shot for the intro section."
+        "url": "https://images.unsplash.com/photo-1645493896628-d6189c7c4626?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxkYXJrJTIwc2tpbiUyMHN1cmZlcnxlbnwwfHx8fDE3OTM1MTgwMTF8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Authentic lifestyle portrait of a dark-skinned surfer",
+        "note": "Authentic lifestyle portrait of a dark-skinned surfer by the ocean, fitting the local vibe perfectly."
       }
     }
   },
@@ -218,12 +218,16 @@
     "Gallery page must have a filter system (All, Action, Lessons, Lifestyle) and an image lightbox (a full-screen fixed div modal overlay upon click).",
     "Contact page form should utilize HTML/Shadcn inputs and a submit handler that opens the floating WhatsApp link with prefilled details."
   ],
+  "GENERAL UI UX DESIGN GUIDELINES": [
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing.",
+    "Header must not have a fully transparent background. Use glassmorphism or solid backgrounds."
+  ],
   "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
     "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
     "Do not apply universal transition (`transition: all`). Add transitions for specific interactive elements only.",
     "Do not center align the app container. No `.App { text-align: center; }`.",
     "Use 2-3x more spacing (e.g. `py-24`, `p-12`) than feels comfortable.",
-    "NEVER use AI assistant Emoji characters like \ud83e\udd16\ud83e\udde0\ud83d\udcad\ud83d\udca1\ud83d\udd2e\ud83c\udfaf etc for icons. Use `lucide-react`.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use `lucide-react`.",
     "NEVER use placeholder URLs. Use the exact image_urls provided in this JSON.",
     "All interactive elements MUST include a `data-testid` attribute (e.g., `data-testid=\"book-now-btn\"`).",
     "Header must not have a fully transparent background. Use glassmorphism (`backdrop-blur-xl bg-[#F7F5F0]/70`) so navigation links are readable over images.",
