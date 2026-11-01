@@ -54,13 +54,11 @@ const Contact = () => {
         description="Get in touch with SurfKarnataka in Gokarna, Karnataka — call, WhatsApp, directions and a quick enquiry form to plan your surfing session."
       />
 
-      <section className="noise relative overflow-hidden bg-ocean pb-20 pt-36 text-cream md:pb-28 md:pt-48">
+      <section className="noise relative overflow-hidden bg-ocean pb-20 pt-40 text-cream md:pb-28 md:pt-56">
         <div className="mx-auto max-w-7xl px-5 md:px-10">
-          <Reveal>
-            <p className="eyebrow text-sand">Contact</p>
-          </Reveal>
+          <Reveal><p className="eyebrow text-sand">Contact</p></Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[0.95] tracking-tight md:text-7xl">
+            <h1 className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[0.92] tracking-tight md:text-7xl">
               Let's Get You Into The Water.
             </h1>
           </Reveal>
@@ -74,7 +72,7 @@ const Contact = () => {
       </section>
 
       <section className="py-20 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-16 px-5 lg:grid-cols-2 lg:gap-20 md:px-10">
+        <div className="mx-auto grid max-w-7xl gap-16 px-5 md:px-10 lg:grid-cols-2 lg:gap-20">
           <div>
             <Reveal>
               <h2 className="font-display text-3xl font-medium tracking-tight text-ocean md:text-4xl">
@@ -84,10 +82,7 @@ const Contact = () => {
             <Reveal delay={0.1}>
               <address className="mt-6 text-base not-italic leading-relaxed text-charcoal/75">
                 {BUSINESS.addressLines.map((line) => (
-                  <span key={line}>
-                    {line}
-                    <br />
-                  </span>
+                  <span key={line}>{line}<br /></span>
                 ))}
               </address>
             </Reveal>
@@ -103,12 +98,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Call Now
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">
-                      {BUSINESS.phoneDisplay}
-                    </span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Call Now</span>
+                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.phoneDisplay}</span>
                   </span>
                 </a>
                 <a
@@ -123,12 +114,8 @@ const Contact = () => {
                     <MessageCircle className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Chat on WhatsApp
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">
-                      {BUSINESS.phoneDisplay}
-                    </span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Chat on WhatsApp</span>
+                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.phoneDisplay}</span>
                   </span>
                 </a>
                 <a
@@ -142,12 +129,8 @@ const Contact = () => {
                     <Instagram className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Instagram
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">
-                      {BUSINESS.instagramHandle}
-                    </span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Instagram</span>
+                    <span className="mt-1 block text-sm font-semibold text-charcoal">{BUSINESS.instagramHandle}</span>
                   </span>
                 </a>
                 <a
@@ -161,12 +144,8 @@ const Contact = () => {
                     <MapPin className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Get Directions
-                    </span>
-                    <span className="mt-1 block text-sm font-semibold text-charcoal">
-                      Gokarna, Karnataka
-                    </span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Get Directions</span>
+                    <span className="mt-1 block text-sm font-semibold text-charcoal">Gokarna, Karnataka</span>
                   </span>
                 </a>
               </div>
@@ -199,11 +178,7 @@ const Contact = () => {
 
           <div>
             <Reveal delay={0.1}>
-              <form
-                data-testid="contact-form"
-                onSubmit={handleSubmit}
-                className="rounded-2xl border border-sand/70 bg-white p-7 md:p-10"
-              >
+              <form data-testid="contact-form" onSubmit={handleSubmit} className="rounded-2xl border border-sand/70 bg-white p-7 md:p-10">
                 <h2 className="font-display text-3xl font-medium tracking-tight text-ocean">
                   Plan Your Session
                 </h2>
@@ -213,95 +188,33 @@ const Contact = () => {
                 </p>
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="cf-name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Your Name *
-                    </label>
-                    <input
-                      id="cf-name"
-                      data-testid="form-name-input"
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={set("name")}
-                      placeholder="Full name"
-                      className={inputClass}
-                    />
+                    <label htmlFor="cf-name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Your Name *</label>
+                    <input id="cf-name" data-testid="form-name-input" type="text" required value={form.name} onChange={set("name")} placeholder="Full name" className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Phone Number *
-                    </label>
-                    <input
-                      id="cf-phone"
-                      data-testid="form-phone-input"
-                      type="tel"
-                      required
-                      value={form.phone}
-                      onChange={set("phone")}
-                      placeholder="+91 ..."
-                      className={inputClass}
-                    />
+                    <label htmlFor="cf-phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Phone Number *</label>
+                    <input id="cf-phone" data-testid="form-phone-input" type="tel" required value={form.phone} onChange={set("phone")} placeholder="+91 ..." className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-experience" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Interested Experience
-                    </label>
-                    <select
-                      id="cf-experience"
-                      data-testid="form-experience-select"
-                      value={form.experience}
-                      onChange={set("experience")}
-                      className={inputClass}
-                    >
+                    <label htmlFor="cf-experience" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Interested Experience</label>
+                    <select id="cf-experience" data-testid="form-experience-select" value={form.experience} onChange={set("experience")} className={inputClass}>
                       <option value="">Not sure yet</option>
                       {EXPERIENCES.map((exp) => (
-                        <option key={exp.id} value={exp.name}>
-                          {exp.name}
-                        </option>
+                        <option key={exp.id} value={exp.name}>{exp.name}</option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="cf-date" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Preferred Date
-                    </label>
-                    <input
-                      id="cf-date"
-                      data-testid="form-date-input"
-                      type="date"
-                      value={form.date}
-                      onChange={set("date")}
-                      className={inputClass}
-                    />
+                    <label htmlFor="cf-date" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Preferred Date</label>
+                    <input id="cf-date" data-testid="form-date-input" type="date" value={form.date} onChange={set("date")} className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="cf-participants" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Number of Participants
-                    </label>
-                    <input
-                      id="cf-participants"
-                      data-testid="form-participants-input"
-                      type="number"
-                      min="1"
-                      value={form.participants}
-                      onChange={set("participants")}
-                      placeholder="e.g. 2"
-                      className={inputClass}
-                    />
+                    <label htmlFor="cf-participants" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Number of Participants</label>
+                    <input id="cf-participants" data-testid="form-participants-input" type="number" min="1" value={form.participants} onChange={set("participants")} placeholder="e.g. 2" className={inputClass} />
                   </div>
                   <div className="sm:col-span-2">
-                    <label htmlFor="cf-message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                      Message
-                    </label>
-                    <textarea
-                      id="cf-message"
-                      data-testid="form-message-input"
-                      rows="4"
-                      value={form.message}
-                      onChange={set("message")}
-                      placeholder="Anything we should know — experience level, questions, timings…"
-                      className={inputClass}
-                    />
+                    <label htmlFor="cf-message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">Message</label>
+                    <textarea id="cf-message" data-testid="form-message-input" rows="4" value={form.message} onChange={set("message")} placeholder="Anything we should know — experience level, questions, timings…" className={inputClass} />
                   </div>
                 </div>
                 <button

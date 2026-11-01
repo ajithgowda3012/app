@@ -1,14 +1,12 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Lenis from "lenis";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Home from "@/pages/Home";
-import SurfLessons from "@/pages/SurfLessons";
-import About from "@/pages/About";
-import Gallery from "@/pages/Gallery";
+import Lessons from "@/pages/Lessons";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import { initAnalytics, trackEvent } from "@/lib/analytics";
@@ -37,9 +35,9 @@ const ScrollManager = () => {
     const lenis = window.__lenis;
     if (hash) {
       const timer = setTimeout(() => {
-        if (lenis) lenis.scrollTo(hash, { offset: -88 });
+        if (lenis) lenis.scrollTo(hash, { offset: -110 });
         else document.querySelector(hash)?.scrollIntoView();
-      }, 120);
+      }, 140);
       return () => clearTimeout(timer);
     }
     if (lenis) lenis.scrollTo(0, { immediate: true });
@@ -67,10 +65,11 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/surf-lessons" element={<SurfLessons />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/lessons" element={<Lessons />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/surf-lessons" element={<Navigate to="/lessons" replace />} />
+              <Route path="/about" element={<Navigate to="/" replace />} />
+              <Route path="/gallery" element={<Navigate to="/" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

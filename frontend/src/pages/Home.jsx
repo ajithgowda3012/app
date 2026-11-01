@@ -1,13 +1,12 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
   Waves,
   MapPin,
-  MessageCircle,
   Instagram,
   ExternalLink,
   Quote,
@@ -25,51 +24,46 @@ import {
   MARQUEE_ITEMS,
   IMAGES,
   img,
-  waLink,
-  GENERAL_MESSAGE,
 } from "@/site.config";
-import { trackEvent } from "@/lib/analytics";
 
 const lineReveal = {
-  hidden: { y: "110%" },
+  hidden: { y: "112%" },
   visible: (i) => ({
     y: "0%",
-    transition: { duration: 0.9, delay: 0.25 + i * 0.14, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 1, delay: 0.3 + i * 0.16, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
 const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "26%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1.08, 1.22]);
 
   return (
     <section ref={ref} className="noise relative flex min-h-[100svh] items-end overflow-hidden bg-ocean">
-      <motion.div style={{ y }} className="absolute inset-0 scale-110">
+      <motion.div style={{ y, scale }} className="absolute inset-0">
         <img
-          src={img(IMAGES.hero, 2200)}
-          alt="Surfer riding a wave at golden hour on the Gokarna coast"
+          src={img(IMAGES.hero, 2400)}
+          alt="Surfer riding a golden wave on the Gokarna coast at sunset"
           className="h-full w-full object-cover"
           fetchpriority="high"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
-      <div
-        className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/40 to-transparent"
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-40 md:px-10 md:pb-28">
+      <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/50 to-transparent" aria-hidden="true" />
+      <div className="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-44 md:px-10 md:pb-32">
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.15, duration: 0.8 }}
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-sand md:text-sm"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.9 }}
+          className="mb-7 text-xs font-semibold uppercase tracking-[0.34em] text-sand md:text-sm"
         >
           Surf School · Gokarna, Karnataka
         </motion.p>
-        <h1 className="font-display text-5xl font-medium leading-[0.95] tracking-tight text-cream sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="font-display text-6xl font-medium leading-[0.92] tracking-tight text-cream sm:text-7xl md:text-8xl lg:text-9xl">
           {["Find Your Wave.", "Discover Your", "Freedom."].map((line, i) => (
-            <span key={line} className="block overflow-hidden pb-1">
+            <span key={line} className="block overflow-hidden pb-1.5">
               <motion.span
                 custom={i}
                 variants={lineReveal}
@@ -85,16 +79,16 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.85, duration: 0.8 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-cream/85 md:text-lg"
+          transition={{ delay: 0.95, duration: 0.9 }}
+          className="mt-7 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg"
         >
           Experience the joy of surfing with SurfKarnataka in Gokarna, Karnataka.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          transition={{ delay: 1.1, duration: 0.9 }}
+          className="mt-11 flex flex-wrap items-center gap-4"
         >
           <WhatsAppButton
             label="Book Your Session"
@@ -104,21 +98,38 @@ const Hero = () => {
             className="px-8 py-4 text-base"
           />
           <Link
-            to="/surf-lessons"
+            to="/lessons"
             data-testid="hero-explore-lessons-btn"
-            className="inline-flex items-center gap-2 rounded-full border border-cream/60 px-8 py-4 text-base font-semibold text-cream transition-colors duration-300 hover:bg-cream hover:text-ocean"
+            className="group inline-flex items-center gap-2 rounded-full border border-cream/60 px-8 py-4 text-base font-semibold text-cream transition-colors duration-300 hover:bg-cream hover:text-ocean"
           >
-            Explore Surf Lessons <ArrowRight className="h-4 w-4" />
+            Explore Surf Lessons
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6, duration: 1 }}
+        className="absolute bottom-8 right-8 hidden text-cream/60 md:block"
+        aria-hidden="true"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2.2, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em]"
+        >
+          Scroll
+          <span className="h-10 w-px bg-cream/40" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
 
 const EditorialMarquee = () => (
   <div className="border-y border-ocean/10 bg-sand py-5" data-testid="editorial-marquee">
-    <Marquee speed={35} gradient={false} pauseOnHover>
+    <Marquee speed={32} gradient={false} pauseOnHover>
       {MARQUEE_ITEMS.map((item) => (
         <span key={item} className="mx-10 flex items-center gap-10">
           <span className="font-display text-2xl italic text-ocean md:text-3xl">{item}</span>
@@ -133,9 +144,7 @@ const Intro = () => (
   <section className="relative overflow-hidden py-24 md:py-36">
     <div className="mx-auto grid max-w-7xl gap-16 px-5 md:grid-cols-12 md:px-10">
       <div className="md:col-span-7">
-        <Reveal>
-          <p className="eyebrow">Welcome to SurfKarnataka</p>
-        </Reveal>
+        <Reveal><p className="eyebrow">Welcome to SurfKarnataka</p></Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
             Your Surfing Journey Starts Here.
@@ -159,23 +168,24 @@ const Intro = () => (
         <Reveal delay={0.4}>
           <div className="mt-10">
             <Link
-              to="/about"
-              data-testid="intro-about-link"
-              className="inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:text-turquoise hover:border-turquoise"
+              to="/lessons"
+              data-testid="intro-lessons-link"
+              className="group inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:border-turquoise hover:text-turquoise"
             >
-              Our Story <ArrowUpRight className="h-4 w-4" />
+              See How You'll Learn
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
         </Reveal>
       </div>
       <div className="md:col-span-5">
         <Reveal delay={0.2} className="relative h-full">
-          <div className="overflow-hidden rounded-2xl border border-sand/70 md:mt-16">
+          <div className="group overflow-hidden rounded-2xl border border-sand/70 md:mt-16">
             <img
               src={img(IMAGES.introSide, 1200)}
-              alt="Surf instructor teaching a beginner lesson on a Gokarna beach"
+              alt="Surf lesson on the beach in warm light"
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+              className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
           </div>
         </Reveal>
@@ -189,9 +199,7 @@ const Experiences = () => (
     <div className="mx-auto max-w-7xl px-5 md:px-10">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <Reveal>
-            <p className="eyebrow">Surfing Experiences</p>
-          </Reveal>
+          <Reveal><p className="eyebrow">Surfing Experiences</p></Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 max-w-xl font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
               Choose How You Want to Surf.
@@ -200,11 +208,12 @@ const Experiences = () => (
         </div>
         <Reveal delay={0.2}>
           <Link
-            to="/surf-lessons"
+            to="/lessons"
             data-testid="experiences-view-all-link"
-            className="inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:text-turquoise hover:border-turquoise"
+            className="group inline-flex items-center gap-2 border-b border-ocean pb-1 text-sm font-semibold uppercase tracking-[0.2em] text-ocean transition-colors duration-300 hover:border-turquoise hover:text-turquoise"
           >
-            All Surf Lessons <ArrowUpRight className="h-4 w-4" />
+            All Surf Lessons
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </Reveal>
       </div>
@@ -228,9 +237,7 @@ const Experiences = () => (
 const WhyUs = () => (
   <section className="bg-ocean py-24 text-cream md:py-36">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal>
-        <p className="eyebrow text-sand">Why SurfKarnataka</p>
-      </Reveal>
+      <Reveal><p className="eyebrow text-sand">Why SurfKarnataka</p></Reveal>
       <Reveal delay={0.1}>
         <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight md:text-6xl">
           The Ocean, the Town, the Way We Teach.
@@ -246,9 +253,7 @@ const WhyUs = () => (
               <span className="font-display text-4xl italic text-turquoise">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-6 font-display text-2xl font-medium tracking-tight">
-                {h.title}
-              </h3>
+              <h3 className="mt-6 font-display text-2xl font-medium tracking-tight">{h.title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-cream/70">{h.text}</p>
             </div>
           </Reveal>
@@ -265,9 +270,7 @@ const GalleryPreview = () => {
       <div className="mx-auto max-w-7xl px-5 md:px-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <Reveal>
-              <p className="eyebrow">Moments from the Water</p>
-            </Reveal>
+            <Reveal><p className="eyebrow">Moments from the Water</p></Reveal>
             <Reveal delay={0.1}>
               <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
                 Gokarna, Through Our Lens.
@@ -275,36 +278,33 @@ const GalleryPreview = () => {
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <Link
-              to="/gallery"
-              data-testid="gallery-preview-link"
+            <a
+              href={BUSINESS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="gallery-instagram-link"
               className="inline-flex items-center gap-2 rounded-full bg-ocean px-7 py-3.5 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep"
             >
-              Explore Our Gallery <ArrowRight className="h-4 w-4" />
-            </Link>
+              <Instagram className="h-4 w-4" /> {BUSINESS.instagramHandle}
+            </a>
           </Reveal>
         </div>
         <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
           {preview.map((photo, i) => (
-            <Reveal
-              key={photo.alt}
-              delay={0.07 * i}
-              className={i === 0 ? "col-span-2 row-span-2" : ""}
-            >
-              <Link
-                to="/gallery"
+            <Reveal key={photo.alt} delay={0.07 * i} className={i === 0 ? "col-span-2 row-span-2" : ""}>
+              <div
                 data-testid={`gallery-preview-img-${i}`}
-                className="group block h-full overflow-hidden rounded-xl"
+                className="group h-full overflow-hidden rounded-xl"
               >
                 <img
                   src={img(photo.src, i === 0 ? 1400 : 800)}
                   alt={photo.alt}
                   loading="lazy"
                   className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
-                    i === 0 ? "aspect-square md:aspect-[4/4.2] h-full" : "aspect-[4/3] md:aspect-[4/4.2]"
+                    i === 0 ? "aspect-square h-full md:aspect-[4/4.2]" : "aspect-[4/3] md:aspect-[4/4.2]"
                   }`}
                 />
-              </Link>
+              </div>
             </Reveal>
           ))}
         </div>
@@ -316,9 +316,7 @@ const GalleryPreview = () => {
 const Reviews = () => (
   <section className="border-y border-sand/70 bg-cream py-24 md:py-36">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal>
-        <p className="eyebrow">What Surfers Say</p>
-      </Reveal>
+      <Reveal><p className="eyebrow">What Surfers Say</p></Reveal>
       <Reveal delay={0.1}>
         <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
           Straight from the Shore.
@@ -328,14 +326,9 @@ const Reviews = () => (
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {REVIEWS.map((r, i) => (
             <Reveal key={r.name} delay={0.08 * i}>
-              <figure
-                data-testid={`review-${i}`}
-                className="flex h-full flex-col rounded-2xl border border-sand/70 bg-white p-8"
-              >
+              <figure data-testid={`review-${i}`} className="flex h-full flex-col rounded-2xl border border-sand/70 bg-white p-8">
                 <Quote className="h-6 w-6 text-turquoise" aria-hidden="true" />
-                <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-charcoal/75 md:text-base">
-                  {r.text}
-                </blockquote>
+                <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-charcoal/75 md:text-base">{r.text}</blockquote>
                 <figcaption className="mt-6 text-sm font-semibold text-ocean">{r.name}</figcaption>
               </figure>
             </Reveal>
@@ -343,10 +336,7 @@ const Reviews = () => (
         </div>
       ) : (
         <Reveal delay={0.2}>
-          <div
-            data-testid="reviews-google-fallback"
-            className="mt-16 flex max-w-3xl flex-col items-start gap-6 rounded-2xl border border-sand/70 bg-white p-8 md:p-12"
-          >
+          <div data-testid="reviews-google-fallback" className="mt-16 flex max-w-3xl flex-col items-start gap-6 rounded-2xl border border-sand/70 bg-white p-8 md:p-12">
             <Quote className="h-8 w-8 text-turquoise" aria-hidden="true" />
             <p className="text-base leading-relaxed text-charcoal/75 md:text-lg">
               We would rather show you real words than make them up. Read what surfers and
@@ -373,9 +363,7 @@ const Location = () => (
   <section className="py-24 md:py-36">
     <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:grid-cols-2 md:px-10">
       <div>
-        <Reveal>
-          <p className="eyebrow">Location</p>
-        </Reveal>
+        <Reveal><p className="eyebrow">Location</p></Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-6 font-display text-4xl font-medium leading-tight tracking-tight text-ocean md:text-6xl">
             Find Us in Gokarna.
@@ -388,10 +376,7 @@ const Location = () => (
               <strong className="font-semibold text-charcoal">{BUSINESS.legalName}</strong>
               <br />
               {BUSINESS.addressLines.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
+                <span key={line}>{line}<br /></span>
               ))}
             </span>
           </address>
@@ -407,12 +392,7 @@ const Location = () => (
             >
               <MapPin className="h-4 w-4" /> Get Directions
             </a>
-            <WhatsAppButton
-              label="Chat on WhatsApp"
-              source="location"
-              tone="outline"
-              testId="location-whatsapp-btn"
-            />
+            <WhatsAppButton label="Chat on WhatsApp" source="location" tone="outline" testId="location-whatsapp-btn" />
           </div>
         </Reveal>
       </div>
@@ -450,8 +430,7 @@ const FinalCta = () => (
       </Reveal>
       <Reveal delay={0.15}>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/85 md:text-lg">
-          Ready to experience surfing in Gokarna? Get in touch with us and plan your
-          session.
+          Ready to experience surfing in Gokarna? Get in touch with us and plan your session.
         </p>
       </Reveal>
       <Reveal delay={0.3}>

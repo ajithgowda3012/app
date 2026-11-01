@@ -207,9 +207,7 @@ export const INSTRUCTORS = [];
 
 export const NAV_LINKS = [
   { label: "Home", to: "/" },
-  { label: "Surf Lessons", to: "/surf-lessons" },
-  { label: "About Us", to: "/about" },
-  { label: "Gallery", to: "/gallery" },
+  { label: "Lessons", to: "/lessons" },
   { label: "Contact", to: "/contact" },
 ];
 

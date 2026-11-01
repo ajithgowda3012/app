@@ -54,6 +54,18 @@ business facts.
 - Gallery filters, lightbox open/next/close; mobile menu navigation
 - robots.txt and llms.txt served as real files; unique titles per page; one H1 per page
 
+## Restructured to 3 pages (2026-11-01)
+Owner requested: 3 pages, SEO-ready, marketing/psychology-driven design, no hamburger
+— a floating top nav bar instead. Built:
+- Pages: Home (discover→trust→enquire), Lessons (decision), Contact (action).
+  About/Gallery folded into Home as scroll sections; old URLs /surf-lessons, /about,
+  /gallery now 301-redirect via <Navigate>.
+- Floating glass pill nav at top: logo + 3 links (animated active pill) + Book CTA,
+  always visible, adapts from deep-glass over the hero to frosted-cream over content.
+  Hamburger removed entirely; mobile uses the same floating bar.
+- Kinetic masked hero reveal, editorial marquee, spotlight photography, scroll-reveals,
+  lenis momentum scroll — the psychological persuasion journey in one continuous flow.
+
 ## Implemented (2026-11-01)
 - Owner-supplied red/yellow SurfKarnataka logo integrated: header, mobile menu,
   footer (on cream card), favicon.png, apple-touch-icon (assets in

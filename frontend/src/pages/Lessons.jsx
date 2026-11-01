@@ -41,7 +41,7 @@ const ExperienceSection = ({ experience, flip }) => (
   <section
     id={experience.id}
     data-testid={`lesson-section-${experience.id}`}
-    className="scroll-mt-28 border-b border-sand/60 py-20 last:border-b-0 md:py-28"
+    className="scroll-mt-32 border-b border-sand/60 py-20 last:border-b-0 md:py-28"
   >
     <div
       className={`mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-10 ${
@@ -49,19 +49,17 @@ const ExperienceSection = ({ experience, flip }) => (
       }`}
     >
       <Reveal>
-        <div className="overflow-hidden rounded-2xl border border-sand/70">
+        <div className="group overflow-hidden rounded-2xl border border-sand/70">
           <img
             src={img(experience.image, 1400)}
             alt={experience.alt}
             loading="lazy"
-            className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out hover:scale-105"
+            className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
       </Reveal>
       <div>
-        <Reveal>
-          <p className="eyebrow">{experience.level}</p>
-        </Reveal>
+        <Reveal><p className="eyebrow">{experience.level}</p></Reveal>
         <Reveal delay={0.1}>
           <h2 className="mt-4 font-display text-4xl font-medium tracking-tight text-ocean md:text-5xl">
             {experience.name}
@@ -105,9 +103,7 @@ const ExperienceSection = ({ experience, flip }) => (
 const LearningJourney = () => (
   <section className="bg-ocean py-24 text-cream md:py-36">
     <div className="mx-auto max-w-7xl px-5 md:px-10">
-      <Reveal>
-        <p className="eyebrow text-sand">The Learning Journey</p>
-      </Reveal>
+      <Reveal><p className="eyebrow text-sand">The Learning Journey</p></Reveal>
       <Reveal delay={0.1}>
         <h2 className="mt-6 max-w-2xl font-display text-4xl font-medium leading-tight tracking-tight md:text-6xl">
           From the Sand to Your First Ride.
@@ -141,19 +137,17 @@ const LearningJourney = () => (
   </section>
 );
 
-const SurfLessons = () => (
+const Lessons = () => (
   <>
     <Seo
       title="Surfing Lessons in Gokarna | SurfKarnataka"
       description="Beginner, intermediate, private and group surfing lessons in Gokarna, Karnataka. See how each session works and enquire on WhatsApp for times and pricing."
     />
-    <section className="noise relative overflow-hidden bg-ocean pb-20 pt-36 text-cream md:pb-28 md:pt-48">
+    <section className="noise relative overflow-hidden bg-ocean pb-20 pt-40 text-cream md:pb-28 md:pt-56">
       <div className="mx-auto max-w-7xl px-5 md:px-10">
-        <Reveal>
-          <p className="eyebrow text-sand">Surf Lessons in Gokarna</p>
-        </Reveal>
+        <Reveal><p className="eyebrow text-sand">Surf Lessons in Gokarna</p></Reveal>
         <Reveal delay={0.1}>
-          <h1 className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[0.95] tracking-tight md:text-7xl">
+          <h1 className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[0.92] tracking-tight md:text-7xl">
             Surfing Experiences for Every Level.
           </h1>
         </Reveal>
@@ -180,4 +174,4 @@ const SurfLessons = () => (
   </>
 );
 
-export default SurfLessons;
+export default Lessons;

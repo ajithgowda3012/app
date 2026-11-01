@@ -4,10 +4,8 @@ SurfKarnataka (Surf Karnataka) is a surf school in Gokarna, Karnataka, India, of
 
 ## Pages
 
-- Home: overview of the surf school, experiences, location in Gokarna and how to book via WhatsApp — /
-- Surf Lessons: details of beginner, intermediate, private and group surfing sessions plus the learning journey — /surf-lessons
-- About Us: the story, surfing philosophy and teaching approach of SurfKarnataka — /about
-- Gallery: photos of surfing, lessons, students, instructors and the Gokarna coast — /gallery
+- Home: overview of the surf school, experiences, gallery, location in Gokarna and how to book via WhatsApp — /
+- Lessons: details of beginner, intermediate, private and group surfing sessions plus the learning journey — /lessons
 - Contact: business details, directions and an enquiry form that continues on WhatsApp — /contact
 
 ## Booking

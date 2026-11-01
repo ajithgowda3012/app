@@ -1,146 +1,97 @@
-import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, useScroll } from "framer-motion";
+import { MessageCircle } from "lucide-react";
 import Logo from "@/components/Logo";
-import { NAV_LINKS, waLink, GENERAL_MESSAGE, BUSINESS } from "@/site.config";
+import { NAV_LINKS, waLink, GENERAL_MESSAGE } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
 
-  const linkClass = ({ isActive }) =>
-    `text-sm font-medium tracking-wide transition-colors duration-300 ${
-      isActive ? "text-ocean" : "text-charcoal/60 hover:text-ocean"
-    }`;
+  useEffect(
+    () => scrollY.on("change", (y) => setScrolled(y > 40)),
+    [scrollY],
+  );
 
   return (
-    <>
-      <header
-        data-testid="site-header"
-        className="fixed inset-x-0 top-0 z-50 border-b border-sand/60 bg-cream/80 backdrop-blur-xl"
+    <motion.header
+      data-testid="site-header"
+      initial={{ y: "-130%" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6"
+    >
+      <div
+        className={`flex w-fit items-center gap-2 rounded-full border py-1.5 pl-1.5 pr-1.5 backdrop-blur-2xl transition-all duration-500 md:gap-3 md:py-2 md:pl-2 md:pr-2 ${
+          scrolled
+            ? "border-sand/70 bg-cream/85 shadow-[0_10px_44px_-12px_rgba(4,47,75,0.4)]"
+            : "border-cream/20 bg-ocean-deep/40 shadow-[0_10px_44px_-12px_rgba(0,0,0,0.55)]"
+        }`}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-10">
-          <Link
-            to="/"
-            data-testid="header-logo"
-            className="flex items-center gap-2.5"
-            aria-label="SurfKarnataka home"
-          >
-            <Logo className="h-12 w-auto md:h-14" />
-          </Link>
+        <Link
+          to="/"
+          data-testid="header-logo"
+          aria-label="SurfKarnataka home"
+          className="flex shrink-0 items-center rounded-full bg-cream px-3 py-1.5"
+        >
+          <Logo className="h-9 w-auto md:h-10" />
+        </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
-            {NAV_LINKS.map((l) => (
-              <NavLink
+        <nav
+          className="flex items-center gap-1 md:gap-2"
+          aria-label="Main navigation"
+        >
+          {NAV_LINKS.map((l) => {
+            const active =
+              l.to === "/"
+                ? location.pathname === "/"
+                : location.pathname.startsWith(l.to);
+            return (
+              <Link
                 key={l.to}
                 to={l.to}
-                end={l.to === "/"}
-                className={linkClass}
                 data-testid={`nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
+                className={`relative rounded-full px-3 py-2 text-xs font-semibold tracking-wide transition-colors duration-300 md:px-4 md:text-sm ${
+                  active
+                    ? scrolled
+                      ? "text-ocean"
+                      : "text-cream"
+                    : scrolled
+                      ? "text-charcoal/60 hover:text-ocean"
+                      : "text-cream/70 hover:text-cream"
+                }`}
               >
-                {l.label}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <a
-              href={waLink(GENERAL_MESSAGE)}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="header-book-session-btn"
-              onClick={() => trackEvent("whatsapp_click", { source: "header" })}
-              className="hidden items-center gap-2 rounded-full bg-ocean px-5 py-2.5 text-sm font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep sm:inline-flex"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Book Your Session
-            </a>
-            <button
-              type="button"
-              data-testid="mobile-menu-btn"
-              onClick={() => setOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand text-ocean lg:hidden"
-              aria-label="Open menu"
-            >
-              <Menu className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[60] bg-ocean text-cream lg:hidden"
-            data-testid="mobile-menu"
-          >
-            <div className="flex h-16 items-center justify-between px-5">
-              <div className="rounded-xl bg-cream px-3 py-1.5">
-                <Logo className="h-11 w-auto" />
-              </div>
-              <button
-                type="button"
-                data-testid="mobile-menu-close-btn"
-                onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/30"
-                aria-label="Close menu"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            <nav className="flex flex-col gap-2 px-6 pt-10" aria-label="Mobile navigation">
-              {NAV_LINKS.map((l, i) => (
-                <motion.div
-                  key={l.to}
-                  initial={{ opacity: 0, x: -18 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.08 + i * 0.06, duration: 0.4 }}
-                >
-                  <Link
-                    to={l.to}
-                    onClick={() => setOpen(false)}
-                    data-testid={`mobile-nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                    className={`block border-b border-cream/10 py-4 font-display text-3xl font-medium transition-colors duration-300 ${
-                      location.pathname === l.to ? "text-sand" : "text-cream"
+                {active && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                    className={`absolute inset-0 rounded-full ${
+                      scrolled ? "bg-sand/70" : "bg-cream/20"
                     }`}
-                  >
-                    {l.label}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45, duration: 0.4 }}
-                className="pt-8"
-              >
-                <a
-                  href={waLink(GENERAL_MESSAGE)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid="mobile-book-session-btn"
-                  onClick={() => {
-                    trackEvent("whatsapp_click", { source: "mobile_menu" });
-                    setOpen(false);
-                  }}
-                  className="inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3.5 text-sm font-semibold text-ocean"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Book Your Session
-                </a>
-                <p className="pt-6 text-sm text-cream/60">{BUSINESS.phoneDisplay}</p>
-              </motion.div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+                  />
+                )}
+                <span className="relative z-10">{l.label}</span>
+              </Link>
+            );
+          })}
+        </nav>
+
+        <a
+          href={waLink(GENERAL_MESSAGE)}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="header-book-session-btn"
+          onClick={() => trackEvent("whatsapp_click", { source: "header" })}
+          className="hidden shrink-0 items-center gap-2 rounded-full bg-ocean px-5 py-2.5 text-xs font-semibold text-cream transition-colors duration-300 hover:bg-ocean-deep sm:inline-flex md:text-sm"
+        >
+          <MessageCircle className="h-4 w-4" />
+          Book
+        </a>
+      </div>
+    </motion.header>
   );
 };
 
