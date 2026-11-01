@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Phone, MapPin, MessageCircle, ExternalLink } from "lucide-react";
-import WaveMark from "@/components/WaveMark";
+import Logo from "@/components/Logo";
 import { BUSINESS, NAV_LINKS, waLink, GENERAL_MESSAGE } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
@@ -9,9 +9,8 @@ const Footer = () => (
     <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
       <div className="grid gap-12 md:grid-cols-12">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-2.5">
-            <WaveMark className="h-9 w-9" tone="light" />
-            <span className="font-display text-2xl font-semibold">SurfKarnataka</span>
+          <div className="inline-flex rounded-2xl bg-cream px-4 py-2">
+            <Logo className="h-14 w-auto" />
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream/70">
             {BUSINESS.description}

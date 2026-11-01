@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
-import WaveMark from "@/components/WaveMark";
+import Logo from "@/components/Logo";
 import { NAV_LINKS, waLink, GENERAL_MESSAGE, BUSINESS } from "@/site.config";
 import { trackEvent } from "@/lib/analytics";
 
@@ -28,10 +28,7 @@ const Header = () => {
             className="flex items-center gap-2.5"
             aria-label="SurfKarnataka home"
           >
-            <WaveMark className="h-8 w-8" />
-            <span className="font-display text-xl font-semibold tracking-tight text-ocean md:text-2xl">
-              SurfKarnataka
-            </span>
+            <Logo className="h-12 w-auto md:h-14" />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
@@ -84,9 +81,8 @@ const Header = () => {
             data-testid="mobile-menu"
           >
             <div className="flex h-16 items-center justify-between px-5">
-              <div className="flex items-center gap-2.5">
-                <WaveMark className="h-8 w-8" tone="light" />
-                <span className="font-display text-xl font-semibold">SurfKarnataka</span>
+              <div className="rounded-xl bg-cream px-3 py-1.5">
+                <Logo className="h-11 w-auto" />
               </div>
               <button
                 type="button"
